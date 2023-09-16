@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section>
+      <!-- header -->
+      <div
+        class="sticky top-0 z-[1] [transition:height_0.3s] bg-[var(--white)]"
+      >
+        <div class="box-container mx-auto grid grid-cols-12">
+          <div class="col-span-1 md:block hidden" id="box-logo">
+            <img
+              id="logo-header"
+              src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="md:col-span-11 col-span-12 md:pr-[40px] pr-0">
+            <!-- top header -->
+            <div id="top-headers" class="md:block hidden">
+              <ul class="flex justify-end gap-2">
+                <li
+                  class="line-clamp-2 inline-block font-bold t-blue p-[5px] text-[1.1rem]"
+                >
+                  <a href="" class="flex"
+                    ><img class="w-[1rem]" src="../img/cart-fill.svg" /> (0) Giỏ
+                    hàng</a
+                  >
+                </li>
+                <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                  <a href="">Kiểm tra đơn hàng</a>
+                </li>
+                <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                  <a href="">Tuyển dụng</a>
+                </li>
+              </ul>
+            </div>
+            <!-- header -->
+            <nav role="navigation" class="menu">
+              <label
+              for="menu"
+              class="w-full h-[55px] flex justify-between flex-nowrap"
+            >
+              <div>
+                <img
+                  class="w-[30px] h-[30px]"
+                  src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="w-[30px] h-[30px]"
+                  src="../img/menu-svgrepo-com.svg"
+                  alt=""
+                />
+              </div>
+            </label>
+              <input type="checkbox" id="menu" />
+              <ul class="list-mn md:gap-[1rem] flex flex-wrap items-center justify-end !pb-[20px] md:!pb-0">
+                <li class="w-[100%] hidden md:block md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="home.html" class="font-bold w-[2.2rem]">
+                    <img class="w-[100%] h-auto" src="../img/home-icon.svg" alt="" />
+                  </a>
+                </li>
+                <li class="w-[100%] block md:!hidden md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="home.html" class="font-bold w-[2.2rem]">
+                    Trang chủ
+                  </a>
+                </li>
+                <!-- GIỚI THIỆU -->
+                <li
+                  class="w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+                >
+                  <a
+                    href=""
+                    for="about"
+                    class="t-blue font-bold text-[1rem]"
+                    >GIỚI THIỆU
+                  </a>
+                  <input type="checkbox" id="about" />
+                  <ul class="menu-dropdown">
+                    <li>
+                      <a class="text-[1rem]" href="review-product.html"
+                        >Giới thiệu công ty</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="history-comany.html"
+                        >Lịch sử hình thành</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="vision.html"
+                        >Tầm nhìn sử mệnh</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="diagram-comany.html"
+                        >Sơ đồ công ty</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="achievements.html"
+                        >Thành tích</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class=" w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+                >
+                  <a href="" for="about" class="font-bold text-[1rem]"
+                    >TIN TỨC & SỰ KIỆN
+                  </a>
+                  <input type="checkbox" id="about" />
+                  <ul class="menu-dropdown">
+                    <li>
+                      <a class="text-[1rem]" href="news.html">Sự kiện</a>
+                    </li>
+                    <li class="menu-hasdropdown menu-hasflyout">
+                      <a class="text-[1rem]" href="news.html"
+                        >Tin tức nội bộ
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="advise.html" class="font-bold text-[1rem]">Ban cố vấn</a>
+                </li>
+                <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="action-news.html" class="font-bold text-[1rem]">HOẠT ĐỘNG</a>
+                </li>
+                <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="library.html" class="font-bold text-[1rem]">ẢNH & VIDEO</a>
+                </li>
+                <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="contact.html" class="font-bold text-[1rem]">LIÊN HỆ</a>
+                </li>
+                <li class="w-[100%] md:w-auto ml-[2rem] md:block flex justify-center">
+                  <button
+                    class="flex items-center gap-2 bg-[#0f4379] text-[1rem] px-[10px] py-[0.4rem] text-[var(--white)] font-bold rounded-2xl"
+                  >
+                    <img
+                      class="h-[0.9rem] w-auto text-[1rem] rounded-2xl"
+                      src="../img/ic_phone.svg"
+                      alt=""
+                    />
+                    0343 44 66 99
+                  </button>
+                </li>
+
+                <li class="relative menu-hasdropdown order-first md:order-last block">
+                  <button
+                    id="box-search"
+                    class="hidden md:block h-[1.9rem] w-[1.9rem] rounded-[100%] border-[1.5px] border-solid border-[var(--blue-dark)]"
+                  >
+                    <img class="h-[0.9rem]" src="../img/ic_search.svg" alt="" />
+                  </button>
+                  <form
+                    action=""
+                    id="search-box"
+                    class="hidden search-mobile animate-slide-in-left"
+                  >
+                    <div
+                      class="menu-dropdown flex flex-nowrap relative p-[15px] md:p-[0] mt-[15px] md:mt-[0] md:absolute top-[143%] right-[0] bg-[#ffffff] [box-shadow:0px_0px_5px_rgb(176,_176,_176)]"
+                    >
+                      <input
+                        class="w-[300px] outline-[none]"
+                        type="text"
+                        placeholder="Nhập từ khóa..."
+                      />
+                      <img
+                        class="cursor-pointer w-[1rem] mr-[10px]"
+                        src="../img/ic_search.svg"
+                        alt=""
+                      />
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- slider -->
+      <div class="slider">
+        <div class="slider-main_item">
+          <img
+            src="https://tambinh.vn/wp-content/uploads/2022/03/mang-ca-tam-tinh.jpg"
+            alt=""
+          />
+        </div>
+        <div class="slider-main_item">
+          <img
+            src="https://tambinh.vn/wp-content/uploads/2022/04/nha-may-gmp-vie.jpg"
+            alt=""
+          />
+        </div>
+        <div class="slider-main_item">
+          <img
+            src="https://tambinh.vn/wp-content/uploads/2022/04/top-5-dong-duoc-vie.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- slogan -->
+      <div class="mx-auto grid grid-cols-12 md:gap-[3rem] gap-0">
+        <div class="md:col-span-1 col-span-0"></div>
+        <div class="slogan md:col-span-3 col-span-12 md:p-[0px] p-[30px]">
+          <p
+            class="relative mt-[3.5714285714285716rem] leading-[3rem] mx-[0] mb-[1.7857142857142858rem] uppercase text-[var(--blue-004C99)] text-[25px] font-normal"
+          >
+            "<span
+              class="text-[2.5rem] font-bold uppercase text-[var(--blue-004C99)]"
+              >Tâm Bình</span
+            >" MANG CẢ TÂM TÌNH TRONG TỪNG SẢN PHẨM
+          </p>
+
+          <p class="text-[1rem] mb-[40px] text-[#000]">
+            Với châm ngôn khởi nghiệp bằng chữ "Tâm", thành công nhờ chữ "Đức",
+            Dược phẩm Tâm Bình luôn lấy chữ “Tâm” làm kim chỉ nam, gắn liền với
+            mọi hoạt động của Công ty
+          </p>
+
+          <div class="">
+            <div class="mb-[1em]">
+              <div
+                data-head=""
+                class="flex flex-nowrap h-[4.714285714285714rem] pl-[0] pr-[0.7142857142857143rem] py-[1.0714285714285714rem] border-[1px] border-solid border-[#c0b58e] rounded-tl-[0.7142857142857143rem] rounded-br-[0.7142857142857143rem] rounded-tr-[0] rounded-bl-[0] bg-[#f7f2e4]"
+              >
+                <div
+                  class="relative w-[5.714285714285714rem] flex items-center justify-center before:content-[''] before:block before:absolute before:top-[0] before:bottom-[0] before:right-[0] before:[border-left:1px_solid_#c0b58e]"
+                >
+                  <img
+                    src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/story-demo-normal.png"
+                    alt="Tâm trong sản xuất"
+                    class="w-[1.8rem] h-auto"
+                    data-ll-status="loaded"
+                  /><noscript
+                    ><img
+                      class="w-[1.8rem] h-auto"
+                      src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/story-demo-normal.png"
+                      alt="Tâm trong sản xuất"
+                  /></noscript>
+                </div>
+                <h3
+                  class="text-[#015ab6] pl-[20px] w-[calc(100%_-_80px)] font-normal flex items-center gap-[0.5em]"
+                >
+                  <strong><span class="text-[1.2rem]">Tâm</span> </strong>
+
+                  <span class="text-[1rem]">trong Sản xuất</span>
+                </h3>
+              </div>
+            </div>
+            <div class="mb-[1em]">
+              <div
+                data-head=""
+                class="flex flex-nowrap h-[4.714285714285714rem] pl-[0] pr-[0.7142857142857143rem] py-[1.0714285714285714rem] border-[1px] border-solid border-[#c0b58e] rounded-tl-[0.7142857142857143rem] rounded-br-[0.7142857142857143rem] rounded-tr-[0] rounded-bl-[0] bg-[#f7f2e4]"
+              >
+                <div
+                  class="relative w-[5.714285714285714rem] flex items-center justify-center before:content-[''] before:block before:absolute before:top-[0] before:bottom-[0] before:right-[0] before:[border-left:1px_solid_#c0b58e]"
+                >
+                  <img
+                    src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/story-demo-normal.png"
+                    alt="Tâm trong sản xuất"
+                    class="w-[1.8rem] h-auto"
+                    data-ll-status="loaded"
+                  /><noscript
+                    ><img
+                      class="w-[1.8rem] h-auto"
+                      src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/story-demo-normal.png"
+                      alt="Tâm trong sản xuất"
+                  /></noscript>
+                </div>
+                <h3
+                  class="text-[#015ab6] pl-[20px] w-[calc(100%_-_80px)] font-normal flex items-center gap-[0.5em]"
+                >
+                  <strong><span class="text-[1.2rem]">Tâm</span> </strong>
+
+                  <span class="text-[1rem]">trong Sản xuất</span>
+                </h3>
+              </div>
+            </div>
+            <div class="mb-[1em]">
+              <div
+                data-head=""
+                class="flex flex-nowrap h-[4.714285714285714rem] pl-[0] pr-[0.7142857142857143rem] py-[1.0714285714285714rem] border-[1px] border-solid border-[#c0b58e] rounded-tl-[0.7142857142857143rem] rounded-br-[0.7142857142857143rem] rounded-tr-[0] rounded-bl-[0] bg-[#f7f2e4]"
+              >
+                <div
+                  class="relative w-[5.714285714285714rem] flex items-center justify-center before:content-[''] before:block before:absolute before:top-[0] before:bottom-[0] before:right-[0] before:[border-left:1px_solid_#c0b58e]"
+                >
+                  <img
+                    src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/story-demo-normal.png"
+                    alt="Tâm trong sản xuất"
+                    class="w-[1.8rem] h-auto"
+                    data-ll-status="loaded"
+                  /><noscript
+                    ><img
+                      class="w-[1.8rem] h-auto"
+                      src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/story-demo-normal.png"
+                      alt="Tâm trong sản xuất"
+                  /></noscript>
+                </div>
+                <h3
+                  class="text-[#015ab6] pl-[20px] w-[calc(100%_-_80px)] font-normal flex items-center gap-[0.5em]"
+                >
+                  <strong><span class="text-[1.2rem]">Tâm</span> </strong>
+
+                  <span class="text-[1rem]">trong Sản xuất</span>
+                </h3>
+              </div>
+            </div>
+            <div class="mb-[1em]">
+              <div
+                data-head=""
+                class="flex flex-nowrap h-[4.714285714285714rem] pl-[0] pr-[0.7142857142857143rem] py-[1.0714285714285714rem] border-[1px] border-solid border-[#c0b58e] rounded-tl-[0.7142857142857143rem] rounded-br-[0.7142857142857143rem] rounded-tr-[0] rounded-bl-[0] bg-[#f7f2e4]"
+              >
+                <div
+                  class="relative w-[5.714285714285714rem] flex items-center justify-center before:content-[''] before:block before:absolute before:top-[0] before:bottom-[0] before:right-[0] before:[border-left:1px_solid_#c0b58e]"
+                >
+                  <img
+                    src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/story-demo-normal.png"
+                    alt="Tâm trong sản xuất"
+                    class="w-[1.8rem] h-auto"
+                    data-ll-status="loaded"
+                  /><noscript
+                    ><img
+                      class="w-[1.8rem] h-auto"
+                      src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/story-demo-normal.png"
+                      alt="Tâm trong sản xuất"
+                  /></noscript>
+                </div>
+                <h3
+                  class="text-[#015ab6] pl-[20px] w-[calc(100%_-_80px)] font-normal flex items-center gap-[0.5em]"
+                >
+                  <strong><span class="text-[1.2rem]">Tâm</span> </strong>
+
+                  <span class="text-[1rem]">trong Sản xuất</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slogan md:col-span-8 col-span-12 h-[400px] md:h-auto">
+          <div class="swiper-wrapper h-full">
+            <div class="w-full relative h-full">
+              <div class="h-full position-relative">
+                <div class="story-item--image h-full">
+                  <img
+                    src="https://tambinh.vn/wp-content/uploads/2022/02/home_s11.png"
+                    alt="Tâm trong sản xuất"
+                    class="h-[autp] block w-full max-h-[750px] absolute bottom-[0]"
+                    data-ll-status="loaded"
+                  />
+                </div>
+                <div
+                  class="absolute top-[0] left-2/4 transform -translate-x-1/2 w-[80%] md:w-1/2 mt-[7%] text-[#000] !text-center"
+                >
+                  <img
+                    src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/icon-quote.png"
+                    alt="#"
+                    class="w-[1rem] h-full mx-auto"
+                    data-ll-status="loaded"
+                  />
+                  <div class="text-[1rem]">
+                    Luôn gắn chữ "Tâm" với mọi hoạt động sản xuất, kinh doanh,
+                    Tâm Bình đã cho ra đời các sản phẩm có hiệu quả cao, giá
+                    thành hợp lý, góp phần nâng cao sức khỏe cộng đồng. Các sản
+                    phẩm mang thương hiệu Tâm Bình được phân phối rộng khắp 63
+                    tỉnh, thành phố và nhận được sự tin tưởng của người dân khắp
+                    cả nước...<a
+                      href="https://tambinh.vn/chu-tam-trong-moi-hanh-trinh/"
+                      ><b>Xem Chi Tiết</b></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sản phẩm tâm bình -->
+      <div
+        class="pt-[5.714285714285714rem] px-[8.3333333333%] pb-[2.142857142857143rem]"
+      >
+        <div class="text-center">
+          <h2
+            class="text-[var(--blue-004C99)] text-[1.7142857142857142rem] font-semibold uppercase"
+          >
+            Sản phẩm Tâm Bình
+          </h2>
+          <p class="mt-[1rem] mb-4">Thực phẩm bảo vệ sức khỏe</p>
+
+          <!-- list sản phẩm -->
+          <div class="responsive">
+            <div
+              class="m-[2rem] bg-[var(--white)] w-[22rem] text-center p-[23px] [box-shadow:0_0_16px_-3px_rgb(0_0_0_/_45%)] rounded-[10px]"
+            >
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://qtskin.vn/images/image_outstand/image_outstand_1.jpg?t=1694444109"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto]"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m-[2rem] bg-[var(--white)] w-[22rem] text-center p-[23px] [box-shadow:0_0_16px_-3px_rgb(0_0_0_/_45%)] rounded-[10px]"
+            >
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://qtskin.vn/images/image_outstand/image_outstand_1.jpg?t=1694444109"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto]"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m-[2rem] bg-[var(--white)] w-[22rem] text-center p-[23px] [box-shadow:0_0_16px_-3px_rgb(0_0_0_/_45%)] rounded-[10px]"
+            >
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://qtskin.vn/images/image_outstand/image_outstand_1.jpg?t=1694444109"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto]"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m-[2rem] bg-[var(--white)] w-[22rem] text-center p-[23px] [box-shadow:0_0_16px_-3px_rgb(0_0_0_/_45%)] rounded-[10px]"
+            >
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://qtskin.vn/images/image_outstand/image_outstand_1.jpg?t=1694444109"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto]"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m-[2rem] bg-[var(--white)] w-[22rem] text-center p-[23px] [box-shadow:0_0_16px_-3px_rgb(0_0_0_/_45%)] rounded-[10px]"
+            >
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://qtskin.vn/images/image_outstand/image_outstand_1.jpg?t=1694444109"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto]"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m-[2rem] bg-[var(--white)] w-[22rem] text-center p-[23px] [box-shadow:0_0_16px_-3px_rgb(0_0_0_/_45%)] rounded-[10px]"
+            >
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://qtskin.vn/images/image_outstand/image_outstand_1.jpg?t=1694444109"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto]"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-[2em] w-full">
+            <a
+              href=""
+              class="my-custom-prev-arrow hover:bg-[var(--red-ee4023)] hover:text-[var(--white)] block w-[36px] h-[36px] text-center border-[1px] border-solid border-[#ee4023] [transition:all_.3s_ease] leading-[36px] outline-[none] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-[1.2rem] leading-loose text-[#ee4023] [transition:all_.3s_ease]"
+            >
+              <
+            </a>
+            <a
+              href=""
+              class="block px-[30px] py-[0] h-[36px] text-center bg-[#ee4023] border-[1px] border-solid border-[#ee4023] [transition:all_.3s_ease] leading-[36px] outline-[none] text-[#fff] uppercase rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] mx-[8px] my-[0]"
+              >Danh sách sản phẩm</a
+            >
+            <a
+              href=""
+              class="my-custom-next-arrow hover:bg-[var(--red-ee4023)] hover:text-[var(--white)] block w-[36px] h-[36px] text-center border-[1px] border-solid border-[#ee4023] [transition:all_.3s_ease] leading-[36px] outline-[none] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-[1.2rem] leading-loose text-[#ee4023] [transition:all_.3s_ease]"
+            >
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- tin tức, sự kiện -->
+      <div class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto p-[3rem]">
+        <div class="overflow-hidden block md:flex items-center justify-between">
+          <h2
+            class="flex justify-center text-[var(--blue-004C99)] text-[26px] uppercase font-bold leading-[50px]"
+          >
+            Tin tức
+          </h2>
+          <ul class="flex justify-center">
+            <li
+              id="newfeed-box"
+              class="cursor-pointer bg-[var(--blue-004C99)] text-[var(--white)] block text-[#000] leading-none text-sm px-[25px] py-[14px] md:ml-[10px]  border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
+            >
+              <h3>Tin nổi bật</h3>
+            </li>
+            <li
+              id="event-box"
+              class="cursor-pointer block text-[#000] leading-none text-sm px-[25px] py-[14px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] bg-[var(--white)] font-bold"
+            >
+              <h3>Sự kiện</h3>
+            </li>
+          </ul>
+        </div>
+
+        <!-- tin nổi bật -->
+        <div
+          id="newfeed-box-content"
+          class="bg-[var(--white)] p-[1rem] mt-[1rem] grid grid-cols-10 gap-[2rem] hidden"
+        >
+          <div class="card md:col-span-4 col-span-10">
+            <div class="detail">
+              <a href="">
+                <img
+                  src="https://i1-vnexpress.vnecdn.net/2023/09/11/VNERiver-1694421812-2960-1694421934.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=5MRujbXq1Nlh9XnErUeORQ"
+                  alt=""
+                />
+              </a>
+              <a
+                href=""
+                class="line-clamp-2 mt-[1rem] text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                >Bổ gan Tâm Bình tổ chức vẽ tranh gây quỹ tặng bệnh nhân gan</a
+              >
+              <small
+                class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                >- 28/07/2023</small
+              >
+              <div class="line-clamp-4 card-text">
+                Chiều ngày 27/7, nhãn hàng Bổ gan Tâm Bình đã trao tặng 40 suất
+                quà với tổng trị giá 23,6 triệu đồng cho các bệnh nhân gan đang
+                điều trị tại Khoa Gan mật, Bệnh viện E. Số tiền được lấy từ “Quỹ
+                chăm sóc…
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-6 col-span-10">
+            <div class="grid-cols-10 grid gap-[1rem]">
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2023/09/11/b775fd022b3dfe63a72c-169442206-7931-3193-1694422871.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=J53DQ6oghwAvz-NaEQXhJQ"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Gần 20 học sinh quay lại trường quốc tế Chồi Xanh</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2023/09/11/pmcbiden1-1694442718-4766-1694442836.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=AjysMFjwc7PoyGxFKyX6yQ"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Thủ tướng: Cần coi kinh tế là động cơ vĩnh cửu của quan hệ
+                    Việt - Mỹ</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-suckhoe.vnecdn.net/2023/09/11/1-1694422444-5087-1694422473.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=-N0W34Bk62EWIneQC4ZzCQ"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Ba người Hà Nội tử vong do sốt xuất huyết</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2023/09/09/Ranantrungset-1694253281-6677-1694253686.jpg?w=500&h=300&q=100&dpr=1&fit=crop&s=0H3haP2zW3Qdr9_yphyylQ"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Loài rắn giữ kỷ lục về kích thước con mồi nuốt được</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2023/09/11/VNEJade-1694430175-7229-1694430261.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=Vcg5lZ4_STupaSxct1ur9w"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Đĩa ngọc thạch bí ẩn trong mộ cổ Trung Quốc</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2023/09/11/antd-kiem-tra-xe-hop-dong-885-6732-6220-1694423916.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=80d8FOrg7uzXa6IPDyRkwg"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Bộ Giao thông Vận tải muốn siết chặt xe hợp đồng trá hình
+                    Bộ Giao thông Vận tải muốn siết chặt xe hợp đồng trá hình</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="tac">
+              <a
+                href=""
+                target="_blank"
+                class="block leading-none text-sm text-[#fff] p-[14px] border-[1px] border-solid border-[rgba(27,27,27,.1)] text-center [transition:all_.3s_ease] bg-[#ee4023] uppercase font-bold w-[130px] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] mt-[30px] mx-[0] mb-[25px]"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- sự kiện-->
+        <div
+          id="event-box-content"
+          class="bg-[var(--white)] p-[1rem] mt-[1rem] grid grid-cols-10 gap-[2rem]"
+        >
+          <div class="card md:col-span-4 col-span-10">
+            <div class="detail">
+              <a href="">
+                <img
+                  src="https://i1-kinhdoanh.vnecdn.net/2023/09/11/anh-1-jpg-1694422421-1891-1694423253.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=wmvZYzY7ujW79d3gWeHxAA"
+                  alt=""
+                />
+              </a>
+              <a
+                href=""
+                class="md:line-clamp-2 mt-[1rem] text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                >Bổ gan Tâm Bình tổ chức vẽ tranh gây quỹ tặng bệnh nhân gan</a
+              >
+              <small
+                class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                >- 28/07/2023</small
+              >
+              <div class="line-clamp-4 card-text">
+                Chiều ngày 27/7, nhãn hàng Bổ gan Tâm Bình đã trao tặng 40 suất
+                quà với tổng trị giá 23,6 triệu đồng cho các bệnh nhân gan đang
+                điều trị tại Khoa Gan mật, Bệnh viện E. Số tiền được lấy từ “Quỹ
+                chăm sóc…
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-6 col-span-10">
+            <div class="grid-cols-10 grid gap-[1rem]">
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2022/08/30/z3671383846976-ef11a5ee62dde08-1492-2557-1661849446.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=-3_YPvZKcT5SVRuAwYm50A"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Ngày hội trí tuệ nhân tạo Việt Nam 2022</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2023/09/10/MualuHK-1694344940-8943-1694345107.jpg?w=240&h=144&q=100&dpr=1&fit=crop&s=2mBCCHd4BI_kWiPyAVi5Xw"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Phát hiện kho đồ cổ bằng vàng nặng hơn 100 gram</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small>
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-suckhoe.vnecdn.net/2023/09/11/1-1694422444-5087-1694422473.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=-N0W34Bk62EWIneQC4ZzCQ"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Nhà khoa học chế tạo gai titan ngăn nhiễm trùng sau cấy
+                    ghép</a>
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2023/09/09/Ranantrungset-1694253281-6677-1694253686.jpg?w=500&h=300&q=100&dpr=1&fit=crop&s=0H3haP2zW3Qdr9_yphyylQ"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Loài rắn giữ kỷ lục về kích thước con mồi nuốt được</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2023/09/11/VNEJade-1694430175-7229-1694430261.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=Vcg5lZ4_STupaSxct1ur9w"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Đĩa ngọc thạch bí ẩn trong mộ cổ Trung Quốc</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+              <div
+                class="md:col-span-5 col-span-10 flex pb-[1rem] [border-bottom:solid_1px_#e4dfc6]"
+              >
+                <a href="" class="w-[30%]">
+                  <img
+                    class="w-full"
+                    src="https://i1-vnexpress.vnecdn.net/2023/09/11/antd-kiem-tra-xe-hop-dong-885-6732-6220-1694423916.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=80d8FOrg7uzXa6IPDyRkwg"
+                    alt=""
+                  />
+                </a>
+                <div class="w-[70%] ml-[1rem]">
+                  <a
+                    href=""
+                    class="md:line-clamp-2 text-[var(--blue-004C99)] text-[1rem] font-bold leading-[20px] h-[2.5rem] overflow-hidden"
+                    >Bộ Giao thông Vận tải muốn siết chặt xe hợp đồng trá hình
+                    Bộ Giao thông Vận tải muốn siết chặt xe hợp đồng trá hình</a
+                  >
+                  <small
+                    class="flex mx-[0] my-[1em] opacity-[.5] text-[#000] text-[1rem] leading-[0]"
+                    >- 28/07/2023</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="tac">
+              <a
+                href=""
+                target="_blank"
+                class="block leading-none text-sm text-[#fff] p-[14px] border-[1px] border-solid border-[rgba(27,27,27,.1)] text-center [transition:all_.3s_ease] bg-[#ee4023] uppercase font-bold w-[130px] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] mt-[30px] mx-[0] mb-[25px]"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- video và tvc -->
+      <div class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+        <div class="overflow-hidden md:flex items-center md:justify-between">
+          <h2
+            class="block text-[var(--blue-004C99)] text-[26px] uppercase font-bold leading-[50px] text-center"
+          >
+            Video
+          </h2>
+          <ul class=" flex justify-center">
+            <li
+              id="video-btn"
+              class="cursor-pointer bg-[var(--blue-004C99)] text-[var(--white)] block text-[#000] leading-none text-sm px-[25px] py-[14px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
+            >
+              <h3>VIDEO</h3>
+            </li>
+            <li
+              id="tvc-btn"
+              class="cursor-pointer block text-[#000] leading-none text-sm px-[25px] py-[14px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] bg-[var(--white)] font-bold"
+            >
+              <h3>TVC</h3>
+            </li>
+          </ul>
+        </div>
+
+        <!-- box - video -->
+        <div
+          id="video-box"
+          class="lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto pt-[2rem] pb-[2rem] grid grid-cols-10 gap-[1rem]"
+        >
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/l1loohrmGD0?si=gtBx0OtaLoFKhg-I&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] text-[1rem] line-clamp-2 m-0 text-[#004c99] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[1rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/pXjzCvhlszY?si=eDJAdBb8h7yTKccJ&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] line-clamp-2 m-0 text-[#004c99] text-[1rem] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[0.9rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/fTv9KfrqI0E?si=HWSSpAUGSLrLgtAc&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] line-clamp-2 m-0 text-[#004c99] text-[1rem] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[0.9rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/l1loohrmGD0?si=gtBx0OtaLoFKhg-I&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] line-clamp-2 m-0 text-[#004c99] text-[1rem] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[0.9rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/l1loohrmGD0?si=gtBx0OtaLoFKhg-I&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] line-clamp-2 m-0 text-[#004c99] text-[1rem] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[0.9rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- box - tcv -->
+        <div
+          id="tvc-box"
+          class="hidden lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto pt-[2rem] pb-[2rem] grid grid-cols-10 gap-[1rem]"
+        >
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/LpZg4xFlEcs?si=PG0xWhf8N1tJDGPO&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] text-[1rem] line-clamp-2 m-0 text-[#004c99] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[0.9rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/pXjzCvhlszY?si=eDJAdBb8h7yTKccJ&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] line-clamp-2 m-0 text-[#004c99] text-[1rem] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[0.9rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/fTv9KfrqI0E?si=HWSSpAUGSLrLgtAc&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] line-clamp-2 m-0 text-[#004c99] text-[1rem] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[0.9rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/l1loohrmGD0?si=gtBx0OtaLoFKhg-I&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] line-clamp-2 m-0 text-[#004c99] text-[1rem] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[0.9rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 col-span-10 px-[3rem] box-ytb">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/l1loohrmGD0?si=gtBx0OtaLoFKhg-I&amp;start=2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <a
+                href=""
+                class="mt-[1rem] line-clamp-2 m-0 text-[#004c99] text-[1rem] font-bold leading-[20px] h-[40px]"
+                >Dược Phẩm Tâm Bình - 10 năm vì sức khỏe cộng đồng</a
+              >
+              <small class="flex items-center text-[0.9rem] mt-[0.7rem]"
+                ><span
+                  class="inline-block h-[1px] w-[20px] bg-[#9C0A14] mr-[0.5rem]"
+                ></span
+                >11/9/2021</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- thành tích -->
+      <div class="mx-auto grid grid-cols-12 md:gap-[5rem] md:pt-[5rem]">
+        <div class="md:col-span-8 col-span-12 relative md:ml-[5rem]">
+          <div
+            class="text-[25px] flex justify-center uppercase font-bold text-[#004c99]"
+          >
+            THÀNH TÍCH
+          </div>
+          <div
+            class="achievements-prev absolute top-[50%] flex items-center justify-center w-[50px] h-[50px] bg-[#0d4b89] text-[#fff] z-[3] top-[45%] outline-[none] text-center leading-[50px] text-3xl rounded-tl-[10px] rounded-br-[10px]"
+          >
+            <svg
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 8 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
+              ></path>
+            </svg>
+          </div>
+          <div
+            class="achievements-next absolute top-[50%] right-[0] flex items-center justify-center w-[50px] h-[50px] bg-[#0d4b89] text-[#fff] z-[3] top-[45%] outline-[none] text-center leading-[50px] text-3xl rounded-tl-[10px] rounded-br-[10px]"
+          >
+            <svg
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 8 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+              ></path>
+            </svg>
+          </div>
+          <div class="slick-merit">
+            <div
+              class="md:w-[847px] w-[500px] p-[5rem] md:p-[9rem] xl:p-[5rem]"
+              data-swiper-slide-index="2"
+            >
+              <img
+                src="https://tambinh.vn/wp-content/uploads/2019/02/Bang-khen-cua-UBND-TP-HN.jpg"
+                alt=""
+                class="lazyloaded"
+                data-ll-status="loaded"
+              />
+              <div class="relative p-[42px] pl-[30px] text-justify">
+                <a
+                  class="home-achievement--title"
+                  style="color: #212529"
+                  href=""
+                  ><strong
+                    >7 NĂM LIÊN TIẾP ĐƯỢC UBND TP HÀ NỘI TẶNG BẰNG KHEN
+                    (2012-2018)</strong
+                  ></a
+                >
+                <p>
+                  Với những thành tích trong sản xuất kinh doanh đóng góp cho sự
+                  phát triển của Thủ Đô, Dược phẩm Tâm Bình đã được UBND TP Hà
+                  Nội tặng bằng khen “Doanh nghiệp tiêu biểu Thủ đô”
+                </p>
+              </div>
+            </div>
+            <div
+              class="md:w-[847px] w-[500px] p-[5rem] md:p-[9rem] xl:p-[5rem] pt-[2rem]"
+              data-swiper-slide-index="2"
+            >
+              <img
+                src="https://tambinh.vn/wp-content/uploads/2019/02/Bang-khen-cua-UBND-TP-HN.jpg"
+                alt=""
+                class="lazyloaded"
+                data-ll-status="loaded"
+              />
+              <div class="relative p-[42px] pl-[30px] text-justify">
+                <a
+                  class="home-achievement--title"
+                  style="color: #212529"
+                  href=""
+                  ><strong
+                    >7 NĂM LIÊN TIẾP ĐƯỢC UBND TP HÀ NỘI TẶNG BẰNG KHEN
+                    (2012-2018)</strong
+                  ></a
+                >
+                <p>
+                  Với những thành tích trong sản xuất kinh doanh đóng góp cho sự
+                  phát triển của Thủ Đô, Dược phẩm Tâm Bình đã được UBND TP Hà
+                  Nội tặng bằng khen “Doanh nghiệp tiêu biểu Thủ đô”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 col-span-12">
+          <div
+            class="bg-[#2d81d4] pt-[60px] px-[40px] pb-[40px] bg-cover bg-[center_center]"
+          >
+            <h4
+              class="mb-[25px] text-[25px] font-['Montserrat',sans-serif] uppercase font-bold"
+            >
+              <a href="" style="color: #fff">Ban cố vấn</a>
+            </h4>
+            <div id="js-advirstoryer-scrollbars" class="">
+              <div
+                id="mCSB_1"
+                class="relative overflow-y-scroll h-full pr-[15px] scroll-smooth max-h-[520px!important] max-w-full outline-[0] [direction:ltr]"
+                style="max-height: none"
+                tabindex="0"
+              >
+                <div
+                  id="mCSB_1_container"
+                  class="relative top-0 left-0"
+                  dir="ltr"
+                >
+                  <ul>
+                    <li>
+                      <div class="flex mb-[25px]">
+                        <div
+                          class="block w-[80px] h-[80px] rounded-[50%] overflow-hidden"
+                        >
+                          <img
+                            src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                            alt="GS.BS Dương Trọng Hiếu"
+                            class="mCS_img_loaded lazyloaded"
+                            data-ll-status="loaded"
+                          /><noscript
+                            ><img
+                              src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                              alt="GS.BS Dương Trọng Hiếu"
+                              class="mCS_img_loaded"
+                          /></noscript>
+                        </div>
+                        <div
+                          class="w-[calc(100%_-_80px)] text-[#fff] pl-[24px] pt-0"
+                        >
+                          <div
+                            class="text-sm uppercase font-['Montserrat',sans-serif] font-semibold"
+                          >
+                            GS.BS Dương Trọng Hiếu
+                          </div>
+                          <div class="advirstoryer-thumb--desc">
+                            <p>
+                              Nguyên Trưởng phòng Y Vụ, Vụ Y học cổ truyền, Bộ Y
+                              tế.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex mb-[25px]">
+                        <div
+                          class="block w-[80px] h-[80px] rounded-[50%] overflow-hidden"
+                        >
+                          <img
+                            src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                            alt="GS.BS Dương Trọng Hiếu"
+                            class="mCS_img_loaded lazyloaded"
+                            data-ll-status="loaded"
+                          /><noscript
+                            ><img
+                              src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                              alt="GS.BS Dương Trọng Hiếu"
+                              class="mCS_img_loaded"
+                          /></noscript>
+                        </div>
+                        <div
+                          class="w-[calc(100%_-_80px)] text-[#fff] pl-[24px] pt-0"
+                        >
+                          <div
+                            class="text-sm uppercase font-['Montserrat',sans-serif] font-semibold"
+                          >
+                            GS.BS Dương Trọng Hiếu
+                          </div>
+                          <div class="advirstoryer-thumb--desc">
+                            <p>
+                              Nguyên Trưởng phòng Y Vụ, Vụ Y học cổ truyền, Bộ Y
+                              tế.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex mb-[25px]">
+                        <div
+                          class="block w-[80px] h-[80px] rounded-[50%] overflow-hidden"
+                        >
+                          <img
+                            src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                            alt="GS.BS Dương Trọng Hiếu"
+                            class="mCS_img_loaded lazyloaded"
+                            data-ll-status="loaded"
+                          /><noscript
+                            ><img
+                              src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                              alt="GS.BS Dương Trọng Hiếu"
+                              class="mCS_img_loaded"
+                          /></noscript>
+                        </div>
+                        <div
+                          class="w-[calc(100%_-_80px)] text-[#fff] pl-[24px] pt-0"
+                        >
+                          <div
+                            class="text-sm uppercase font-['Montserrat',sans-serif] font-semibold"
+                          >
+                            GS.BS Dương Trọng Hiếu
+                          </div>
+                          <div class="advirstoryer-thumb--desc">
+                            <p>
+                              Nguyên Trưởng phòng Y Vụ, Vụ Y học cổ truyền, Bộ Y
+                              tế.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex mb-[25px]">
+                        <div
+                          class="block w-[80px] h-[80px] rounded-[50%] overflow-hidden"
+                        >
+                          <img
+                            src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                            alt="GS.BS Dương Trọng Hiếu"
+                            class="mCS_img_loaded lazyloaded"
+                            data-ll-status="loaded"
+                          /><noscript
+                            ><img
+                              src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                              alt="GS.BS Dương Trọng Hiếu"
+                              class="mCS_img_loaded"
+                          /></noscript>
+                        </div>
+                        <div
+                          class="w-[calc(100%_-_80px)] text-[#fff] pl-[24px] pt-0"
+                        >
+                          <div
+                            class="text-sm uppercase font-['Montserrat',sans-serif] font-semibold"
+                          >
+                            GS.BS Dương Trọng Hiếu
+                          </div>
+                          <div class="advirstoryer-thumb--desc">
+                            <p>
+                              Nguyên Trưởng phòng Y Vụ, Vụ Y học cổ truyền, Bộ Y
+                              tế.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex mb-[25px]">
+                        <div
+                          class="block w-[80px] h-[80px] rounded-[50%] overflow-hidden"
+                        >
+                          <img
+                            src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                            alt="GS.BS Dương Trọng Hiếu"
+                            class="mCS_img_loaded lazyloaded"
+                            data-ll-status="loaded"
+                          /><noscript
+                            ><img
+                              src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                              alt="GS.BS Dương Trọng Hiếu"
+                              class="mCS_img_loaded"
+                          /></noscript>
+                        </div>
+                        <div
+                          class="w-[calc(100%_-_80px)] text-[#fff] pl-[24px] pt-0"
+                        >
+                          <div
+                            class="text-sm uppercase font-['Montserrat',sans-serif] font-semibold"
+                          >
+                            GS.BS Dương Trọng Hiếu
+                          </div>
+                          <div class="advirstoryer-thumb--desc">
+                            <p>
+                              Nguyên Trưởng phòng Y Vụ, Vụ Y học cổ truyền, Bộ Y
+                              tế.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex mb-[25px]">
+                        <div
+                          class="block w-[80px] h-[80px] rounded-[50%] overflow-hidden"
+                        >
+                          <img
+                            src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                            alt="GS.BS Dương Trọng Hiếu"
+                            class="mCS_img_loaded lazyloaded"
+                            data-ll-status="loaded"
+                          /><noscript
+                            ><img
+                              src="https://tambinh.vn/wp-content/uploads/2018/06/gs-ts-duong-trong-hieu.png"
+                              alt="GS.BS Dương Trọng Hiếu"
+                              class="mCS_img_loaded"
+                          /></noscript>
+                        </div>
+                        <div
+                          class="w-[calc(100%_-_80px)] text-[#fff] pl-[24px] pt-0"
+                        >
+                          <div
+                            class="text-sm uppercase font-['Montserrat',sans-serif] font-semibold"
+                          >
+                            GS.BS Dương Trọng Hiếu
+                          </div>
+                          <div class="advirstoryer-thumb--desc">
+                            <p>
+                              Nguyên Trưởng phòng Y Vụ, Vụ Y học cổ truyền, Bộ Y
+                              tế.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  id="mCSB_1_scrollbar_vertical"
+                  class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical"
+                  style="display: block"
+                >
+                  <div class="mCSB_draggerContainer">
+                    <div
+                      id="mCSB_1_dragger_vertical"
+                      class="mCSB_dragger"
+                      style="
+                        position: absolute;
+                        min-height: 30px;
+                        display: block;
+                        height: 356px;
+                        max-height: 510px;
+                        top: 0px;
+                      "
+                    >
+                      <div
+                        class="mCSB_dragger_bar"
+                        style="line-height: 30px"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="mCSB_draggerRail"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#fbf5ed] w-full">
+        <div
+          class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto md:px-[0] md:py-[35px] flex grid grid-cols-12 gap-[20px] p-[3rem]"
+        >
+          <div
+            id="s61"
+            class="md:col-span-4 col-span-12 p-[1.5rem] bg-[#fdfaf6] h-[fit-content]"
+          >
+            <h4 class="text-3xl leading-[40px] font-bold">
+              <img
+                class="float-left !w-[48px] mt-[0.5em] mr-[0.5em] mb-[0] ml-[0]"
+                src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/s61.png"
+                alt=""
+                data-ll-status="loaded"
+              />Tâm Bình vì sức khỏe cộng đồng
+            </h4>
+            <p class="italic">
+              Tại Tâm Bình, chúng tôi tự hào về chất lượng, chuyên môn, cập nhật
+              thông tin sức khỏe mỗi ngày.
+            </p>
+            <a
+              class="text-[#fff] bg-[#2d81d4] px-[30px] py-[0] table mx-[auto] my-[0] mt-[15px]"
+              href=""
+              >Chính sách biên tập</a
+            >
+          </div>
+          <div id="s62" class="md:col-span-4 col-span-12">
+            <img
+              src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/s62.png"
+              alt=""
+              class="table mx-[auto] my-[25px] !w-[40px]"
+              data-ll-status="loaded"
+            />
+            <p class="text-center md:text-start">
+              Tâm Bình luôn hướng đến mục tiêu trở thành nền tảng thông tin y
+              khoa tin cậy top đầu tại Việt Nam cũng như mang đến cho bạn đọc
+              kiến thức chăm sóc sức khỏe dựa trên tiêu chí E-E-A-T
+            </p>
+          </div>
+          <div id="s63" class="md:col-span-4 col-span-12">
+            <p class="text-center md:text-start flex md:block justify-center flex-wrap">
+              <img
+                src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/s63.png"
+                alt=""
+                class="md:float-left !w-[40px] mt-[2.5em] mr-[4em] mb-[3.5em] ml-[4em]"
+                data-ll-status="loaded"
+              /><noscript
+                ><img
+                  src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/s63.png"
+                  alt="" /></noscript
+              >Hơn 2000+ bài viết được đầu tư bài bản, có sự kiểm duyệt nghiêm
+              ngặt từ khâu chuyên môn, đội ngũ cố vấn từ những chuyên gia đầu
+              ngành; ngôn ngữ, nội dung phù hợp với người dùng Việt Nam; thông
+              tin được đảm bảo, phong phú; đa dạng chủ đề.
+            </p>
+            <p class="mt-[1.5rem] text-center md:text-start flex md:block justify-center flex-wrap">
+              <img
+                src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/s61.png"
+                alt=""
+                class="float-left !w-[40px] mt-[2.5em] mr-[4em] mb-[3.5em] ml-[4em]"
+                data-ll-status="loaded"
+              /><noscript
+                ><img
+                  src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/s61.png"
+                  alt="" /></noscript
+              >Thông tin bài viết luôn được cập nhật, tiếp nhận ý kiến từ độc
+              giả và đội ngũ chuyên môn, đảm bảo tính tương tác, gần gũi, thân
+              thiện với bạn đọc.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer
+        class="md:pt-[0] pt-[20px] px-[8.3333333333%] pb-[100px] bg-[#0d4b89] text-[#fff] flex items-start flex-wrap"
+      >
+        <a
+          class="relative md:block hidden p-[20px] bg-[#fff] rounded-tl-[0] rounded-br-[15px] rounded-tr-[0] rounded-bl-[0] text-xs"
+          href=""
+          ><img
+            src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.png"
+            alt="#"
+        /></a>
+
+        <div class="md:pt-[30px] md:px-[60px] pb-[0] md:w-[35%]">
+          <div class="mb-[0.5rem]" static-id="8">
+            <span
+              class="font-bold"
+              data-sheets-value='{"1":2,"2":"CÔNG TY TNHH SX &amp; TM DƯỢC PHẨM TÂM BÌNH"}'
+              data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+              >CÔNG TY TNHH SX &amp; TM DƯỢC PHẨM TÂM BÌNH</span
+            >
+          </div>
+          <!-- <div class="footer-tax-code" static-id="57">MST/ĐKKD/QĐTL: 0102190173</div> -->
+          <div class="footer-branch-addrs" static-id="12">
+            <a
+              target="_blank"
+              rel="nofollow, noopener"
+              href="https://goo.gl/maps/KxMEBLVK3ytwmn8E6"
+              title="Google map"
+              >Địa chỉ: 349 Kim Mã, Q.Ba Đình, Hà Nội</a
+            >
+          </div>
+          <div
+            class="pb-[15px] mb-[15px] relative [border-bottom:1px_solid_#ffffff81]"
+          >
+            Điện thoại:
+            <a href="tel:02437245678">(024) 3724 5678</a>
+            <span>-</span>
+            <a href="tel:02437345600">(024) 3734 5600</a>
+            <div class="footer-addrs">
+              Email: duocpham@tambinh.vn <br />Giấy chứng nhận ĐKKD số
+              0102190173 do Sở Kế hoạch và Đầu tư TP.HN cấp ngày 20/03/2007
+            </div>
+          </div>
+
+          <!-- == -->
+
+          <div class="mb-[0.5rem]" static-id="13">
+            <span
+              class="font-bold"
+              data-sheets-value='{"1":2,"2":"CHI NHÁNH DƯỢC PHẨM TÂM BÌNH SÀI GÒN"}'
+              data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+              >CHI NHÁNH DƯỢC PHẨM TÂM BÌNH SÀI GÒN</span
+            >
+          </div>
+          <div class="footer-branch-addrs" static-id="12">
+            <a
+              target="_blank"
+              rel="nofollow, noopener"
+              href="https://g.page/Tambinhsaigon?share"
+              title="Google map"
+              >Địa chỉ 243/9/21 Tô Hiến Thành, Phường 13 Quận 10, TP.HCM</a
+            >
+          </div>
+          <div class="footer-phone">
+            Điện thoại:
+            <a href="tel:02838623944">(028) 3862 3944</a>
+            <span>-</span>
+            <a href="tel:02838623945">(028) 3862 3945</a>
+          </div>
+          <!-- == -->
+          <div class="footer-hotline">
+            <strong
+              >Hotline tư vấn:
+              <a href="tel:0343446699">0343 44 66 99</a></strong
+            >
+          </div>
+        </div>
+        <div class="md:pt-[30px] md:w-[30%] md:pr-[30px]">
+          <div
+            class="pb-[15px] mb-[15px] relative [border-bottom:1px_solid_#ffffff81]"
+          >
+            <div class="footer-company help-ttu help-fwb" static-id="15">
+              <span
+                class="font-bold"
+                data-sheets-value='{"1":2,"2":"NHÀ MÁY SẢN XUẤT DƯỢC PHẨM TÂM BÌNH"}'
+                data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+                >NHÀ MÁY SẢN XUẤT GMP DƯỢC PHẨM TÂM BÌNH</span
+              >
+            </div>
+            <div class="footer-branch-addrs" static-id="12">
+              <a
+                target="_blank"
+                rel="nofollow, noopener"
+                href="https://goo.gl/maps/V58i7q8YE1wMQJhT7"
+                title="Google map"
+                >Địa chỉ: Lô CN03 - 12 Khu CN Ninh Hiệp, Gia Lâm, Hà Nội</a
+              >
+            </div>
+            <div class="footer-phone _line">
+              Điện thoại:
+              <a href="tel:02437245678">(024) 3696 3454</a>
+              <span>-</span>
+              <a href="tel:02437345600">(024) 3734 5600</a>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-[calc(((100%_-_15px)_/_3)_*_1.75)] mr-[15px]">
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách biên tập</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách bảo mật thông tin</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách kiểm hàng, đổi trả và hoàn tiền</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách vận chuyển</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách mua hàng – Thanh toán</a
+              >
+            </div>
+
+            <div class="w-[calc(((100%_-_15px)_/_3)_*_1.25)]">
+              <a href=""
+                ><img
+                  src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/icon1.png"
+                  data-src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/icon1.png"
+                  class="[135px] w-full h-auto mb-[1rem]"
+              /></a>
+              <a href="" title="DMCA.com Protection Status" class="dmca-badge">
+                <img
+                  src="https://images.dmca.com/Badges/_dmca_premi_badge_5.png?ID=e50d6272-11e9-48b8-b103-2fc7569708e9"
+                  alt="DMCA.com Protection Status"
+                  class="[135px] w-full h-auto"
+                  data-ll-status="loaded"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="md:pt-[30px] md:w-[20%]">
+          <div class="font-bold uppercase mb-[1rem]">
+            Đăng ký để theo dõi Tâm Bình
+          </div>
+          <form
+            id="subscribe_email_footer"
+            action=""
+            method="POST"
+            class="relative overflow-hidden mt-[20px]"
+          >
+            <div class="form-group" id="form-fields-footer">
+              <input
+                type="email"
+                placeholder="Nhập email của bạn "
+                class="text-[#000] font-[Montserrat] text-xs float-left w-full outline-[none] border-none h-[40px] px-[10px] py-[0]"
+                id="subscribe_email"
+                name="subscribe_email"
+              />
+              <button
+                type="submit"
+                id="btn-register"
+                name="action"
+                class="btn btn-default"
+              >
+                <img
+                  class="block absolute right-[10px] top-[9px] border-none outline-[none] z-[1] cursor-pointer bg-transparent w-[20px]"
+                  src="../img/send.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="form-result-message"></div>
+          </form>
+          <ul class="mt-[25px] mx-[0] mb-[0] pl-0">
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href=""
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/facebook.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://zalo.me/0865344349"
+                target="_blank"
+                class="inline-block float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                >Zalo</a
+              >
+            </li>
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href="https://www.youtube.com/c/TambinhVn"
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/instagram.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href="https://www.linkedin.com/in/duoctambinh/"
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/twitter.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href=""
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/youtube.svg" alt=""
+              /></a>
+            </li>
+            <p style="clear: both">
+              Cố vấn chuyên môn nội dung <br /><b>Ths.Bs Nguyễn Thị Hằng</b>
+            </p>
+          </ul>
+        </div>
+      </footer>
+
+      <div
+        class="hidden md:block [border-top:2px_solid_#ee4023] bg-[#0b5cad] px-[0] py-[10px] text-[#fff] fixed w-full left-[0] bottom-[0] z-[1001]"
+      >
+        <div class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+          <div class="flex justify-between">
+            <div class="flex gap-[20px]">
+              <div
+                class="bg-[#fff] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#0b5cad] text-[15px] flex text-center"
+              >
+                <a href="tel:0343446699" class="flex" title="">
+                  <img
+                    class="w-[12px] mr-[10px]"
+                    src="../img/ic_phone-blue.svg"
+                    alt=""
+                  />
+                  <span class="font-bold">0343 44 66 99</span>
+                </a>
+              </div>
+              <div class="">
+                <a
+                  class="bg-[#ee4023] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#ffffff] text-[15px] flex items-center text-center font-bold"
+                  href=""
+                  title=""
+                  id="ffb"
+                >
+                  <img
+                    class="w-[15px] mr-[10px]"
+                    src="../img/cart.svg"
+                    alt=""
+                  />
+                  MUA ONLINE
+                </a>
+              </div>
+            </div>
+            <div
+              class="bg-[#fff] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#0b5cad] text-[15px] flex text-center items-center"
+            >
+              <a href="tel:0343446699" class="flex" title="">
+                <img
+                  class="w-[15px] mr-[10px]"
+                  src="../img/calendar-check-fill.svg"
+                  alt=""
+                />
+                <span class="font-bold">GỬI CÂU HỎI</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- animation -->
+    <!-- btn to top -->
+    <script src="../js/btnToTopandhideMenu.js"></script>
+    <!-- animation giowis thieu theo yeu cau -->
+    <!-- <script src="../js/animationQC.js"></script> -->
+    <!-- ẩn hiện menu mobile -->
+    <!-- <script src="../js/menu.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const $jq = jQuery.noConflict();
+
+      jQuery(document).ready(function () {
+        jQuery(".slick-merit").slick({
+          dots: false,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          arrows: true,
+          centerMode: true,
+          variableWidth: true,
+          prevArrow: ".achievements-prev",
+          nextArrow: ".achievements-next",
+          responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 700,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ]
+        });
+      });
+      jQuery(document).ready(function () {
+        jQuery(".slider").slick({
+          dots: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: false,
+        });
+      });
+
+      jQuery(".responsive").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: ".my-custom-prev-arrow",
+        nextArrow: ".my-custom-next-arrow",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+
+    <script>
+      var btnNewFeed = document.getElementById("newfeed-box");
+      var btnEvent = document.getElementById("event-box");
+      var boxNewFeed = document.getElementById("newfeed-box-content");
+      var boxEvent = document.getElementById("event-box-content");
+
+      btnNewFeed.addEventListener("click", () => {
+        btnNewFeed.classList.add("bg-[var(--blue-004C99)]");
+        btnNewFeed.classList.add("text-[var(--white)]");
+        btnNewFeed.classList.remove("bg-[var(--white)]");
+        btnNewFeed.classList.remove("text-[var(--blue-004C99)]");
+        btnEvent.classList.remove("bg-[var(--blue-004C99)]");
+        btnEvent.classList.remove("text-[var(--white)]");
+        btnEvent.classList.add("bg-[var(--white)]");
+        btnEvent.classList.add("text-[var(--blue-004C99)]");
+        boxNewFeed.classList.add("hidden");
+        boxEvent.classList.remove("hidden");
+      });
+
+      btnEvent.addEventListener("click", () => {
+        btnEvent.classList.add("bg-[var(--blue-004C99)]");
+        btnEvent.classList.add("text-[var(--white)]");
+        btnEvent.classList.remove("bg-[var(--white)]");
+        btnEvent.classList.remove("text-[var(--blue-004C99)]");
+        btnNewFeed.classList.remove("bg-[var(--blue-004C99)]");
+        btnNewFeed.classList.remove("text-[var(--white)]");
+        btnNewFeed.classList.add("bg-[var(--white)]");
+        btnNewFeed.classList.add("text-[var(--blue-004C99)]");
+        boxNewFeed.classList.remove("hidden");
+        boxEvent.classList.add("hidden");
+      });
+    </script>
+
+    <script>
+      var btnVideo = document.getElementById("video-btn");
+      var btnVTC = document.getElementById("tvc-btn");
+      var boxVideo = document.getElementById("video-box");
+      var boxTCV = document.getElementById("tvc-box");
+
+      btnVideo.addEventListener("click", () => {
+        btnVideo.classList.add("bg-[var(--blue-004C99)]");
+        btnVideo.classList.add("text-[var(--white)]");
+        btnVideo.classList.remove("bg-[var(--white)]");
+        btnVideo.classList.remove("text-[var(--blue-004C99)]");
+        btnVTC.classList.remove("bg-[var(--blue-004C99)]");
+        btnVTC.classList.remove("text-[var(--white)]");
+        btnVTC.classList.add("bg-[var(--white)]");
+        btnVTC.classList.add("text-[var(--blue-004C99)]");
+        boxVideo.classList.add("hidden");
+        boxTCV.classList.remove("hidden");
+      });
+
+      btnVTC.addEventListener("click", () => {
+        btnVTC.classList.add("bg-[var(--blue-004C99)]");
+        btnVTC.classList.add("text-[var(--white)]");
+        btnVTC.classList.remove("bg-[var(--white)]");
+        btnVTC.classList.remove("text-[var(--blue-004C99)]");
+        btnVideo.classList.remove("bg-[var(--blue-004C99)]");
+        btnVideo.classList.remove("text-[var(--white)]");
+        btnVideo.classList.add("bg-[var(--white)]");
+        btnVideo.classList.add("text-[var(--blue-004C99)]");
+        boxTCV.classList.add("hidden");
+        boxVideo.classList.remove("hidden");
+      });
+    </script>
+
+    <!-- script click search in header -->
+    <script>
+      const btnSearch = document.getElementById("box-search");
+      const boxSearch = document.getElementById("search-box");
+
+      btnSearch.addEventListener("click", () => {
+        boxSearch.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

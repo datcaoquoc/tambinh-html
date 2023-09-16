@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>news</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div>
+      <!-- header -->
+      <div
+        class="sticky top-0 z-[1] [transition:height_0.3s] bg-[var(--white)]"
+      >
+        <div class="box-container mx-auto grid grid-cols-12">
+          <div class="col-span-1 md:block hidden" id="box-logo">
+            <img
+              id="logo-header"
+              src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="md:col-span-11 col-span-12 md:pr-[40px] pr-0">
+            <!-- top header -->
+            <div id="top-headers" class="md:block hidden">
+              <ul class="flex justify-end gap-2">
+                <li
+                  class="line-clamp-2 inline-block font-bold t-blue p-[5px] text-[1.1rem]"
+                >
+                  <a href="" class="flex"
+                    ><img class="w-[1rem]" src="../img/cart-fill.svg" /> (0) Giỏ
+                    hàng</a
+                  >
+                </li>
+                <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                  <a href="">Kiểm tra đơn hàng</a>
+                </li>
+                <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                  <a href="">Tuyển dụng</a>
+                </li>
+              </ul>
+            </div>
+            <!-- header -->
+            <nav role="navigation" class="menu">
+              <label
+              for="menu"
+              class="w-full h-[55px] flex justify-between flex-nowrap"
+            >
+              <div>
+                <img
+                  class="w-[30px] h-[30px]"
+                  src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="w-[30px] h-[30px]"
+                  src="../img/menu-svgrepo-com.svg"
+                  alt=""
+                />
+              </div>
+            </label>
+              <input type="checkbox" id="menu" />
+              <ul class="list-mn md:gap-[1rem] flex flex-wrap items-center justify-end !pb-[20px] md:!pb-0">
+                <li class="w-[100%] hidden md:block md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="home.html" class="font-bold w-[2.2rem]">
+                    <img class="w-[100%] h-auto" src="../img/home-icon.svg" alt="" />
+                  </a>
+                </li>
+                <li class="w-[100%] block md:!hidden md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="home.html" class="font-bold w-[2.2rem]">
+                    Trang chủ
+                  </a>
+                </li>
+                <!-- GIỚI THIỆU -->
+                <li
+                  class="w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+                >
+                  <a
+                    href=""
+                    for="about"
+                    class="t-blue font-bold text-[1rem]"
+                    >GIỚI THIỆU
+                  </a>
+                  <input type="checkbox" id="about" />
+                  <ul class="menu-dropdown">
+                    <li>
+                      <a class="text-[1rem]" href="review-product.html"
+                        >Giới thiệu công ty</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="history-comany.html"
+                        >Lịch sử hình thành</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="vision.html"
+                        >Tầm nhìn sử mệnh</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="diagram-comany.html"
+                        >Sơ đồ công ty</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="achievements.html"
+                        >Thành tích</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class=" w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+                >
+                  <a href="" for="about" class="font-bold text-[1rem]"
+                    >TIN TỨC & SỰ KIỆN
+                  </a>
+                  <input type="checkbox" id="about" />
+                  <ul class="menu-dropdown">
+                    <li>
+                      <a class="text-[1rem]" href="news.html">Sự kiện</a>
+                    </li>
+                    <li class="menu-hasdropdown menu-hasflyout">
+                      <a class="text-[1rem]" href="news.html"
+                        >Tin tức nội bộ
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="advise.html" class="font-bold text-[1rem]">Ban cố vấn</a>
+                </li>
+                <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="action-news.html" class="font-bold text-[1rem]">HOẠT ĐỘNG</a>
+                </li>
+                <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="library.html" class="font-bold text-[1rem]">ẢNH & VIDEO</a>
+                </li>
+                <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                  <a href="contact.html" class="font-bold text-[1rem]">LIÊN HỆ</a>
+                </li>
+                <li class="w-[100%] md:w-auto ml-[2rem] md:block flex justify-center">
+                  <button
+                    class="flex items-center gap-2 bg-[#0f4379] text-[1rem] px-[10px] py-[0.4rem] text-[var(--white)] font-bold rounded-2xl"
+                  >
+                    <img
+                      class="h-[0.9rem] w-auto text-[1rem] rounded-2xl"
+                      src="../img/ic_phone.svg"
+                      alt=""
+                    />
+                    0343 44 66 99
+                  </button>
+                </li>
+
+                <li class="relative menu-hasdropdown order-first md:order-last block">
+                  <button
+                    id="box-search"
+                    class="hidden md:block h-[1.9rem] w-[1.9rem] rounded-[100%] border-[1.5px] border-solid border-[var(--blue-dark)]"
+                  >
+                    <img class="h-[0.9rem]" src="../img/ic_search.svg" alt="" />
+                  </button>
+                  <form
+                    action=""
+                    id="search-box"
+                    class="hidden search-mobile animate-slide-in-left"
+                  >
+                    <div
+                      class="menu-dropdown flex flex-nowrap relative p-[15px] md:p-[0] mt-[15px] md:mt-[0] md:absolute top-[143%] right-[0] bg-[#ffffff] [box-shadow:0px_0px_5px_rgb(176,_176,_176)]"
+                    >
+                      <input
+                        class="w-[300px] outline-[none]"
+                        type="text"
+                        placeholder="Nhập từ khóa..."
+                      />
+                      <img
+                        class="cursor-pointer w-[1rem] mr-[10px]"
+                        src="../img/ic_search.svg"
+                        alt=""
+                      />
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div
+          class="w-full h-[200px] relative bg-cover bg-[center_center] bg-no-repeat flex items-center align-middle flex-wrap text-center"
+          style="
+            background-image: url('https://tambinh.vn/wp-content/themes/tam-binh/assets/images/news/bg-news-header.png');
+          "
+          data-ll-status="loaded"
+        >
+          <h1
+            class="w-full font-bold uppercase text-[25px] tracking-[2px] text-[#004c99]"
+          >
+            SỰ KIỆN
+          </h1>
+        </div>
+      </div>
+
+      <section>
+        <div
+      class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-[-32px] mx-[auto] pb-[40px] relative"
+    >
+        <div class=" grid grid-cols-12 gap-[30px] px-[20px] xl:px-0">
+            <div class="md:col-span-8 col-span-12 bg-[#fff] p-[25px]">
+                <h1 class="text-[2rem] leading-[2.1rem]">Chủ tịch Công đoàn Tâm Bình trúng cử Ban Chấp hành LĐLĐ quận Ba Đình</h1>
+                <div class="relative block w-full opacity-[.5] text-[#000] mt-[15px] text-[1rem] leading-[30px] before:content-[''] before:absolute before:h-[1px] before:w-[20px] before:bg-[#9C0A14] before:bottom-[0] before:left-[0]">21/07/23</div>
+                <h2 class="text-[1rem] mt-[15px]"><em>Tại Đại hội Công đoàn quận Ba Đình lần thứ XI diễn ra chiều 19/7, đồng chí (đ/c) Hoàng Phương (Chủ tịch Công đoàn Dược phẩm Tâm Bình) đã trúng cử vào Ban Chấp hành LĐLĐ quận khóa XI nhiệm kỳ 2023 – 2028 với số phiếu tín nhiệm cao.</em></h2>
+                <div class="flex justify-start my-[20px]">
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+
+                </div>
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0&appId=387191382279071&autoLogAppEvents=1" nonce="H9EudH41"></script>
+                <!-- content -->
+                <div class="mt-[30px]">
+                    <p style="text-align:justify"><span style="font-size:16px">QT SKIN tự hào là một trong những nhà máy dược mỹ phẩm quy mô lớn nhất tại miền Nam. Với mong muốn lưu giữ, bảo vệ và phát triển thảo dược nước Việt nhà máy dược mỹ phẩm QT Skin đạt chuẩn GMP - Mở ra kỷ nguyên mới cho sự phát triển trong ngành sản xuất dược phẩm Việt Nam</span></p>
+                    <p style="text-align:justify"><span style="font-size:16px"><span style="color:#000000">Được khánh thành với&nbsp; quy mô hàng nghìn m2 cùng đội ngũ chuyên gia nhà máy QT Skin đã giải quyết bài toán về nguyên liệu dược mỹ phẩm đang bị thiếu trên thị trường Việt Nam.&nbsp;Nhà máy QT Skin hoạt động theo chuyển CGMP với công suất lớn đã minh chứng cho sự chuyển mình mạnh mẽ, theo đúng tiêu chí "Người dẫn đường: đưa những bài thuốc thảo dược gia truyền ngày càng phát triển mạnh mẽ, khẳng định được chỗ đứng không chỉ trong mà còn ngoài nước.</span></span></p>
+                    <p style="text-align:center"><img src="https://i1-vnexpress.vnecdn.net/2023/09/16/viber-image-2023-09-16-09-58-1-6513-6769-1694842273.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=R4dKPdpqVBqHb6Nk1YSrDg" style="height:660px; margin:0px; width:665px"></p>
+                    <p style="text-align:justify"><span style="font-size:16px"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Nơi đây cũng hỗ trợ các hoạt động nghiên cứu, cải thiện đánh giá các sản phẩm thảo dược khi xuất xưởng và đưa ra thị trường tiêu thụ. Nhìn lại những hoạt động và quá trình phát triển QT Skin xứng đáng là đơn vị tiên phong, dẫn đầu trong ngành công nghiệp gia công dược mỹ phẩm. QT Skin sẽ không ngừng lớn mạnh và mở ra nhiều cơ hội hợp tác thành công hơn nữa trong tương lai. Để đạt được những thành công như vậy, phải kể đến tâm huyết cũng như tầm nhìn xa của ban lãnh đạo công ty, cùng toàn bộ sự đóng góp của cán bộ công nhân viên.</span></span></span></p>
+                    <p style="text-align:justify">&nbsp;</p>
+                    <p style="text-align:center"><img src="https://i1-vnexpress.vnecdn.net/2023/09/14/usa-vn-jpg-7734-1694692146-169-6544-4833-1694692577.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=Wt1O_kyCUqbweVFnbiAIag"><img src="https://i1-vnexpress.vnecdn.net/2023/09/14/314993434-6064001500323316-733-3018-2056-1694687710.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=6uW0M52e6ORwZbCzD6fPAA" style="height:662px; width:663px"></p>
+                    <p style="text-align:center">&nbsp;</p>
+                    <p><span style="font-size:20px"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>&nbsp;Thế mạnh của QT Skin</strong></span></span></span></p>
+                    <p><span style="font-size:16px"><span style="font-family:Arial,sans-serif"><span style="color:#000000">- Quy mô nhà máy với công suất 1tr sản phẩm/ tháng</span></span></span></p>
+                    <p><span style="font-size:16px"><span style="font-family:Arial,sans-serif"><span style="color:#000000">- Có hơn 100 công thức về dược phẩm và mỹ phẩm ổn định và liên tục cập nhật thay đổi.&nbsp;</span></span></span></p>
+                    <p><span style="font-size:16px"><span style="font-family:Arial,sans-serif"><span style="color:#000000">- Hệ thống máy móc hiện đại, nhiều máy tự động</span></span></span></p>
+                    <p><span style="font-size:16px"><span style="font-family:Arial,sans-serif"><span style="color:#000000">- Phòng nghiên cứu sản phẩm và đội ngũ được đầu tư bài bản.&nbsp;</span></span></span></p>
+                    <p><span style="font-size:16px"><span style="font-family:Arial,sans-serif"><span style="color:#000000">- Đội ngũ cán bộ công nhân viên chuyên nghiệp, nhiệt tình. </span></span></span></p>
+                    <p style="text-align:center"><img src="/images_content/image-20230829144837-5_1693294817.png" style="height:664px; width:662px"><p style="text-align:center"><img src="/images_content/image-20230829144837-5_1693294817.png" style="height:664px; width:662px"></p></p>
+                    <p style="text-align:center"><span style="font-size:16px"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Nhìn vào QT Skin đây cũng là động lực to lớn để ngành dược mỹ phẩm Việt không ngừng nỗ lực vươn xa hơn trong tương lai, xây dựng và phát triển nền dược y học nước nhà. </span></span></span></p>
+                </div>
+                <div id="respond" class="mt-[30px]">
+                    <span id="reply-title" class="" style="font-size: 20px;color: #333399;font-weight:bold">Trả lời <small><a rel="nofollow" id="cancel-comment-reply-link" href="/chu-tich-cong-doan-tam-binh-trung-cu-ban-chap-hanh-ldld-quan-ba-dinh/#respond" style="display:none;">Hủy</a></small></span>
+                    <p class="mt-[20px]"><span id="email-notes">Email của bạn sẽ không được hiển thị công khai.</span> Các trường bắt buộc được đánh dấu <span class="required">*</span></p>
+                    <form action="" class="mt-[12px]">
+                        <div class="grid grid-cols-12  mt-[15px]">
+                            <div class="col-span-2">
+                                Bình luận
+                            </div>
+                            <div class="col-span-10">
+                                <textarea type="text" rows="8" class="border-[1px] border-solid border-[var(--black)] w-full"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-12 mt-[15px]">
+                            <div class="col-span-2">
+                                Tên *
+                            </div>
+                            <div class="col-span-10">
+                                <input type="text" class="border-[1px] border-solid border-[var(--black)] w-full p-[5px]">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-12 mt-[15px]">
+                            <div class="col-span-2">
+                                Email *
+                            </div>
+                            <div class="col-span-10">
+                                <input type="text" class="border-[1px] border-solid border-[var(--black)] w-full p-[5px]">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-12 mt-[15px]">
+                            <div class="col-span-2">
+                                Điện thoại *
+                            </div>
+                            <div class="col-span-10">
+                                <input type="text" class="border-[1px] border-solid border-[var(--black)] w-full p-[5px]">
+                            </div>
+                        </div>
+
+                        <input name="submit" type="submit" id="submit" class=" text-[100%] m-0 mt-[15px] leading-none cursor-pointer relative no-underline overflow-visible px-[1em] py-[0.618em] font-bold rounded-[3px] text-[1.3rem] left-auto text-[#515151] bg-[#ebe9eb] border-[0] inline-block bg-none [box-shadow:none] [text-shadow:none] !text-[#F27F71] [width:initial] mx-[auto] my-[0] table" value="Phản hồi" fdprocessedid="dacal8">
+                    </form>
+                
+                </div>
+            </div>
+
+            <div class="md:col-span-4 col-span-12">
+                <div class="bg-[#fff] p-[25px]">
+                    <div class="_news-type ty3r showd">
+                        <div class="relative font-['Maven_Pro',sans-serif] text-[22px] leading-[22px] text-[#000] pb-[12px] font-bold mb-[16px] before:absolute before:content-[''] before:bottom-[0] before:left-[0] before:w-[50px] before:h-[1px] before:bg-[#b03b43]">Bài cùng danh mục</div>
+                                <div class="grid grid-cols-12 gap-[10px] mt-[15px]">
+                                    <img class="img169 col-span-4" src="https://i1-vnexpress.vnecdn.net/2023/09/14/314993434-6064001500323316-733-3018-2056-1694687710.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=6uW0M52e6ORwZbCzD6fPAA" alt="">
+                                    <div class="col-span-8">
+                                        <a href="" class="line-clamp-3 text-[#004c99] font-['Montserrat',sans-serif] text-[1rem] font-bold">Dược phẩm Tâm Bình tưng bừng giao lưu chào mừng ngày 20/10</a>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-12 gap-[10px] mt-[15px]">
+                                    <img class="img169 col-span-4" src="https://i1-vnexpress.vnecdn.net/2023/09/14/314993434-6064001500323316-733-3018-2056-1694687710.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=6uW0M52e6ORwZbCzD6fPAA" alt="">
+                                    <div class="col-span-8">
+                                        <a href="" class="line-clamp-3 text-[#004c99] font-['Montserrat',sans-serif] text-[1rem] font-bold">Dược phẩm Tâm Bình tưng bừng giao lưu chào mừng ngày 20/10</a>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-12 gap-[10px] mt-[15px]">
+                                    <img class="img169 col-span-4" src="https://i1-vnexpress.vnecdn.net/2023/09/14/314993434-6064001500323316-733-3018-2056-1694687710.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=6uW0M52e6ORwZbCzD6fPAA" alt="">
+                                    <div class="col-span-8">
+                                        <a href="" class="line-clamp-3 text-[#004c99] font-['Montserrat',sans-serif] text-[1rem] font-bold">Dược phẩm Tâm Bình tưng bừng giao lưu chào mừng ngày 20/10</a>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-12 gap-[10px] mt-[15px]">
+                                    <img class="img169 col-span-4" src="https://i1-vnexpress.vnecdn.net/2023/09/14/314993434-6064001500323316-733-3018-2056-1694687710.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=6uW0M52e6ORwZbCzD6fPAA" alt="">
+                                    <div class="col-span-8">
+                                        <a href="" class="line-clamp-3 text-[#004c99] font-['Montserrat',sans-serif] text-[1rem] font-bold">Dược phẩm Tâm Bình tưng bừng giao lưu chào mừng ngày 20/10</a>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-12 gap-[10px] mt-[15px]">
+                                    <img class="img169 col-span-4" src="https://i1-vnexpress.vnecdn.net/2023/09/14/314993434-6064001500323316-733-3018-2056-1694687710.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=6uW0M52e6ORwZbCzD6fPAA" alt="">
+                                    <div class="col-span-8">
+                                        <a href="" class="line-clamp-3 text-[#004c99] font-['Montserrat',sans-serif] text-[1rem] font-bold">Dược phẩm Tâm Bình tưng bừng giao lưu chào mừng ngày 20/10</a>
+                                    </div>
+                                </div>
+                                            
+                    </div>
+                </div>
+
+                <div class="bg-[#fff] mt-[20px] sticky top-[70px]">
+                    <div class="bg-[#ee4023] p-[15px] text-[#fff] text-[1.3rem] font-bold flex justify-center">
+                        GỬI CÂU HỎI TƯ VẤN
+                    </div>
+
+                    <form action="" class="p-[20px]">
+                        <input class="w-full  border-[1px] border-solid border-[var(--gray)] mb-[10px] rounded-[5px] p-[10px]" type="text" placeholder="Họ và tên">
+                        <input class="w-full  border-[1px] border-solid border-[var(--gray)] mb-[10px] rounded-[5px] p-[10px]"  type="text" placeholder="Điện thoại">
+                        <input class="w-full  border-[1px] border-solid border-[var(--gray)] mb-[10px] rounded-[5px] p-[10px]" type="text" placeholder="Email">
+                        <textarea class="w-full  border-[1px] border-solid border-[var(--gray)] mb-[10px] rounded-[5px] p-[10px]" placeholder="Nội dung câu hỏi" name="" id="" cols="30" rows="10"></textarea>
+                        
+                        <button type="submit" class="mx-auto block py-[10px] px-[30px] bg-[#0b5cad] text-[#fff] rounded-[30px] font-semibold">
+                                Gửi thông tin
+                        </button>
+                    
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mx-[auto] pb-[40px] mt-[40px]">
+        <div class="text-[2rem] text-[var(--blue-004C99)] flex justify-center">
+            CÁC BÀI VIẾT KHÁC
+        </div>
+
+        <div class="grid grid-cols-12 mt-[30px] mb-[30px] p-[30px] lg:p-0 gap-[2rem]">
+            <div class="lg:col-span-3 md:col-span-6 col-span-12">
+              <div class="bg-[#fff] p-[7px]">
+                <div class="card-block">
+                  <a
+                    href=""
+                    class="img rocket-lazyload lazyloaded"
+                    data-ll-status="loaded"
+                  >
+                  <img class="img169" src="https://tambinh.vn/wp-content/uploads/2023/07/BCH-DH-LDLD-quan-Ba-Dinh.jpg" alt="">
+                  </a>
+                  <div class="px-[0] py-[15px]">
+                    <a
+                      href=""
+                      class="line-clamp-2 m-0 text-[#004c99] text-[1.2rem] font-bold"
+                      >Chủ tịch Công đoàn Tâm Bình trúng cử </a
+                    >
+                    <small class="flex items-center text-[1rem] mb-[0.5rem] mt-[0.5rem]"><span class="ml-[3px] h-[1px] w-[20px] bg-[#9C0A14]"></span>21/07/2023</small>
+                    <div class="opacity-[.8] text-[#000] line-clamp-2 text-[1rem] leading-[20px]">
+                      Tại Đại hội Công đoàn quận Ba Đình lần thứ XI diễn ra chiều
+                      19/7, đồng chí (đ/c) Hoàng Phương (Chủ tịch Công…
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-3 md:col-span-6 col-span-12">
+              <div class="bg-[#fff] p-[7px]">
+                <div class="card-block">
+                  <a
+                    href=""
+                    class="img rocket-lazyload lazyloaded"
+                    data-ll-status="loaded"
+                  >
+                  <img class="img169" src="https://i1-vnexpress.vnecdn.net/2023/09/14/truso-1694688623-5123-1694702702.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=Mr_xW0V6YN_DqzFU1B9V2w" alt="">
+                  </a>
+                  <div class="px-[0] py-[15px]">
+                    <a
+                      href=""
+                      class="line-clamp-2 m-0 text-[#004c99] text-[1.2rem] font-bold"
+                      >Hà Nội tạm dừng hoạt động văn hóa giải trí</a
+                    >
+                    <small class="flex items-center text-[1rem] mb-[0.5rem] mt-[0.5rem]"><span class="ml-[3px] h-[1px] w-[20px] bg-[#9C0A14]"></span>21/07/2023</small>
+                    <div class="opacity-[.8] text-[#000] line-clamp-2 text-[1rem] leading-[20px]">
+                      Từ 14 đến 17/9, Hà Nội dừng hoạt động văn hóa, thể thao, vui chơi giải trí và tổ chức mặc niệm nạn nhân tử vong trong vụ cháy chung cư mini vào 8h sáng 18/9.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-3 md:col-span-6 col-span-12">
+              <div class="bg-[#fff] p-[7px]">
+                <div class="card-block">
+                  <a
+                    href=""
+                    class="img rocket-lazyload lazyloaded"
+                    data-ll-status="loaded"
+                  >
+                  <img class="img169" src="https://i1-kinhdoanh.vnecdn.net/2023/09/14/euro-1694684287-5803-1694684293.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=AVV606DGO7PGC5RHa8gYYg" alt="">
+                  </a>
+                  <div class="px-[0] py-[15px]">
+                    <a
+                      href=""
+                      class="line-clamp-2 m-0 text-[#004c99] text-[1.2rem] font-bold"
+                      >ECB có thể nâng lãi suất lên cao kỷ lục</a
+                    >
+                    <small class="flex items-center text-[1rem] mb-[0.5rem] mt-[0.5rem]"><span class="ml-[3px] h-[1px] w-[20px] bg-[#9C0A14]"></span>21/07/2023</small>
+                    <div class="opacity-[.8] text-[#000] line-clamp-2 text-[1rem] leading-[20px]">
+                      Ngân hàng Trung ương châu Âu (ECB) hôm nay sẽ họp để quyết định tiếp tục nâng lãi suất hay tạm dừng khi nền kinh tế đang tuột dốc. 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-3 md:col-span-6 col-span-12">
+              <div class="bg-[#fff] p-[7px]">
+                <div class="card-block">
+                  <a
+                    href=""
+                    class="img rocket-lazyload lazyloaded"
+                    data-ll-status="loaded"
+                  >
+                  <img class="img169" src="https://tambinh.vn/wp-content/uploads/2023/07/BCH-DH-LDLD-quan-Ba-Dinh.jpg" alt="">
+                  </a>
+                  <div class="px-[0] py-[15px]">
+                    <a
+                      href=""
+                      class="line-clamp-2 m-0 text-[#004c99] text-[1.2rem] font-bold"
+                      >Chủ tịch Công đoàn Tâm Bình trúng cử Ban Chấp hành LĐLĐ
+                      quận Ba Đình</a
+                    >
+                    <small class="flex items-center text-[1rem] mb-[0.5rem] mt-[0.5rem]"><span class="ml-[3px] h-[1px] w-[20px] bg-[#9C0A14]"></span>21/07/2023</small>
+                    <div class="opacity-[.8] text-[#000] line-clamp-2 text-[1rem] leading-[20px]">
+                      Tại Đại hội Công đoàn quận Ba Đình lần thứ XI diễn ra chiều
+                      19/7, đồng chí (đ/c) Hoàng Phương (Chủ tịch Công…
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <a href="" target="_blank" class="block leading-none text-sm text-[#fff] p-[14px] border-[1px] border-solid border-[rgba(27,27,27,.1)] text-center [transition:all_.3s_ease] bg-[#ee4023] uppercase font-bold w-[130px] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] mt-[30px] mx-[0] mb-[25px]" style="width: initial;display: table;margin:0 auto">Xem tất cả bài viết</a>
+    </div>
+
+    <style>
+        audio, canvas, embed, iframe, img, object, svg, video {
+     display: inline-block;
+     vertical-align: middle;
+ }
+     </style>
+      </section>
+
+      <style>
+
+
+/* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+.rating-group {
+  display: inline-flex;
+}
+
+/* make hover effect work properly in IE */
+.rating__icon {
+  pointer-events: none;
+}
+
+/* hide radio inputs */
+.rating__input {
+ position: absolute !important;
+ left: -9999px !important;
+}
+
+/* set icon padding and size */
+.rating__label {
+  cursor: pointer;
+  /* if you change the left/right padding, update the margin-right property of .rating__label--half as well. */
+  padding: 0 0.1em;
+  font-size: 2rem;
+}
+
+/* add padding and positioning to half star labels */
+.rating__label--half {
+  padding-right: 0;
+  margin-right: -0.6em;
+  z-index: 2;
+}
+
+/* set default star color */
+.rating__icon--star {
+  color: orange;
+}
+
+/* set color of none icon when unchecked */
+.rating__icon--none {
+  color: #eee;
+}
+
+/* if none icon is checked, make it red */
+.rating__input--none:checked + .rating__label .rating__icon--none {
+  color: red;
+}
+
+/* if any input is checked, make its following siblings grey */
+.rating__input:checked ~ .rating__label .rating__icon--star {
+  color: #ddd;
+}
+
+/* make all stars orange on rating group hover */
+.rating-group:hover .rating__label .rating__icon--star,
+.rating-group:hover .rating__label--half .rating__icon--star {
+  color: orange;
+}
+
+/* make hovered input's following siblings grey on hover */
+.rating__input:hover ~ .rating__label .rating__icon--star,
+.rating__input:hover ~ .rating__label--half .rating__icon--star {
+  color: #ddd;
+}
+
+/* make none icon grey on rating group hover */
+.rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
+   color: #eee;
+}
+
+/* make none icon red on hover */
+.rating__input--none:hover + .rating__label .rating__icon--none {
+  color: red;
+}
+
+      </style>
+
+
+    <!-- footer -->
+    <footer
+      class="md:pt-[0] pt-[20px] px-[8.3333333333%] pb-[100px] bg-[#0d4b89] text-[#fff] flex items-start flex-wrap"
+    >
+      <a
+        class="relative md:block hidden p-[20px] bg-[#fff] rounded-tl-[0] rounded-br-[15px] rounded-tr-[0] rounded-bl-[0] text-xs"
+        href=""
+        ><img
+          src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.png"
+          alt="#"
+      /></a>
+
+      <div class="md:pt-[30px] md:px-[60px] pb-[0] md:w-[35%]">
+        <div class="mb-[0.5rem]" static-id="8">
+          <span
+            class="font-bold"
+            data-sheets-value='{"1":2,"2":"CÔNG TY TNHH SX &amp; TM DƯỢC PHẨM TÂM BÌNH"}'
+            data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+            >CÔNG TY TNHH SX &amp; TM DƯỢC PHẨM TÂM BÌNH</span
+          >
+        </div>
+        <!-- <div class="footer-tax-code" static-id="57">MST/ĐKKD/QĐTL: 0102190173</div> -->
+        <div class="footer-branch-addrs" static-id="12">
+          <a
+            target="_blank"
+            rel="nofollow, noopener"
+            href="https://goo.gl/maps/KxMEBLVK3ytwmn8E6"
+            title="Google map"
+            >Địa chỉ: 349 Kim Mã, Q.Ba Đình, Hà Nội</a
+          >
+        </div>
+        <div
+          class="pb-[15px] mb-[15px] relative [border-bottom:1px_solid_#ffffff81]"
+        >
+          Điện thoại:
+          <a href="tel:02437245678">(024) 3724 5678</a>
+          <span>-</span>
+          <a href="tel:02437345600">(024) 3734 5600</a>
+          <div class="footer-addrs">
+            Email: duocpham@tambinh.vn <br />Giấy chứng nhận ĐKKD số 0102190173
+            do Sở Kế hoạch và Đầu tư TP.HN cấp ngày 20/03/2007
+          </div>
+        </div>
+
+        <!-- == -->
+
+        <div class="mb-[0.5rem]" static-id="13">
+          <span
+            class="font-bold"
+            data-sheets-value='{"1":2,"2":"CHI NHÁNH DƯỢC PHẨM TÂM BÌNH SÀI GÒN"}'
+            data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+            >CHI NHÁNH DƯỢC PHẨM TÂM BÌNH SÀI GÒN</span
+          >
+        </div>
+        <div class="footer-branch-addrs" static-id="12">
+          <a
+            target="_blank"
+            rel="nofollow, noopener"
+            href="https://g.page/Tambinhsaigon?share"
+            title="Google map"
+            >Địa chỉ 243/9/21 Tô Hiến Thành, Phường 13 Quận 10, TP.HCM</a
+          >
+        </div>
+        <div class="footer-phone">
+          Điện thoại:
+          <a href="tel:02838623944">(028) 3862 3944</a>
+          <span>-</span>
+          <a href="tel:02838623945">(028) 3862 3945</a>
+        </div>
+        <!-- == -->
+        <div class="footer-hotline">
+          <strong
+            >Hotline tư vấn: <a href="tel:0343446699">0343 44 66 99</a></strong
+          >
+        </div>
+      </div>
+      <div class="md:pt-[30px] md:w-[30%] md:pr-[30px]">
+        <div
+          class="pb-[15px] mb-[15px] relative [border-bottom:1px_solid_#ffffff81]"
+        >
+          <div class="footer-company help-ttu help-fwb" static-id="15">
+            <span
+              class="font-bold"
+              data-sheets-value='{"1":2,"2":"NHÀ MÁY SẢN XUẤT DƯỢC PHẨM TÂM BÌNH"}'
+              data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+              >NHÀ MÁY SẢN XUẤT GMP DƯỢC PHẨM TÂM BÌNH</span
+            >
+          </div>
+          <div class="footer-branch-addrs" static-id="12">
+            <a
+              target="_blank"
+              rel="nofollow, noopener"
+              href="https://goo.gl/maps/V58i7q8YE1wMQJhT7"
+              title="Google map"
+              >Địa chỉ: Lô CN03 - 12 Khu CN Ninh Hiệp, Gia Lâm, Hà Nội</a
+            >
+          </div>
+          <div class="footer-phone _line">
+            Điện thoại:
+            <a href="tel:02437245678">(024) 3696 3454</a>
+            <span>-</span>
+            <a href="tel:02437345600">(024) 3734 5600</a>
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-[calc(((100%_-_15px)_/_3)_*_1.75)] mr-[15px]">
+            <a
+              class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+              href=""
+              >Chính sách biên tập</a
+            >
+            <a
+              class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+              href=""
+              >Chính sách bảo mật thông tin</a
+            >
+            <a
+              class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+              href=""
+              >Chính sách kiểm hàng, đổi trả và hoàn tiền</a
+            >
+            <a
+              class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+              href=""
+              >Chính sách vận chuyển</a
+            >
+            <a
+              class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+              href=""
+              >Chính sách mua hàng – Thanh toán</a
+            >
+          </div>
+
+          <div class="w-[calc(((100%_-_15px)_/_3)_*_1.25)]">
+            <a href=""
+              ><img
+                src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/icon1.png"
+                data-src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/icon1.png"
+                class="[135px] w-full h-auto mb-[1rem]"
+            /></a>
+            <a href="" title="DMCA.com Protection Status" class="dmca-badge">
+              <img
+                src="https://images.dmca.com/Badges/_dmca_premi_badge_5.png?ID=e50d6272-11e9-48b8-b103-2fc7569708e9"
+                alt="DMCA.com Protection Status"
+                class="[135px] w-full h-auto"
+                data-ll-status="loaded"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="md:pt-[30px] md:w-[20%]">
+        <div class="font-bold uppercase mb-[1rem]">
+          Đăng ký để theo dõi Tâm Bình
+        </div>
+        <form
+          id="subscribe_email_footer"
+          action=""
+          method="POST"
+          class="relative overflow-hidden mt-[20px]"
+        >
+          <div class="form-group" id="form-fields-footer">
+            <input
+              type="email"
+              placeholder="Nhập email của bạn "
+              class="text-[#000] font-[Montserrat] text-xs float-left w-full outline-[none] border-none h-[40px] px-[10px] py-[0]"
+              id="subscribe_email"
+              name="subscribe_email"
+            />
+            <button
+              type="submit"
+              id="btn-register"
+              name="action"
+              class="btn btn-default"
+            >
+              <img
+                class="block absolute right-[10px] top-[9px] border-none outline-[none] z-[1] cursor-pointer bg-transparent w-[20px]"
+                src="../img/send.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="form-result-message"></div>
+        </form>
+        <ul class="mt-[25px] mx-[0] mb-[0] pl-0">
+          <li>
+            <a
+              class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+              href=""
+              target="_blank"
+            >
+              <img class="text-[#fff]" src="../img/facebook.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="http://zalo.me/0865344349"
+              target="_blank"
+              class="inline-block float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+              >Zalo</a
+            >
+          </li>
+          <li>
+            <a
+              class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+              href="https://www.youtube.com/c/TambinhVn"
+              target="_blank"
+            >
+              <img class="text-[#fff]" src="../img/instagram.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a
+              class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+              href="https://www.linkedin.com/in/duoctambinh/"
+              target="_blank"
+            >
+              <img class="text-[#fff]" src="../img/twitter.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a
+              class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+              href=""
+              target="_blank"
+            >
+              <img class="text-[#fff]" src="../img/youtube.svg" alt=""
+            /></a>
+          </li>
+          <p style="clear: both">
+            Cố vấn chuyên môn nội dung <br /><b>Ths.Bs Nguyễn Thị Hằng</b>
+          </p>
+        </ul>
+      </div>
+    </footer>
+
+    <div
+      class="hidden md:block [border-top:2px_solid_#ee4023] bg-[#0b5cad] px-[0] py-[10px] text-[#fff] fixed w-full left-[0] bottom-[0] z-[1001]"
+    >
+      <div class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+        <div class="flex justify-between">
+          <div class="flex gap-[20px]">
+            <div
+              class="bg-[#fff] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#0b5cad] text-[15px] flex text-center"
+            >
+              <a href="tel:0343446699" class="flex" title="">
+                <img
+                  class="w-[12px] mr-[10px]"
+                  src="../img/ic_phone-blue.svg"
+                  alt=""
+                />
+                <span class="font-bold">0343 44 66 99</span>
+              </a>
+            </div>
+            <div class="">
+              <a
+                class="bg-[#ee4023] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#ffffff] text-[15px] flex items-center text-center font-bold"
+                href=""
+                title=""
+                id="ffb"
+              >
+                <img class="w-[15px] mr-[10px]" src="../img/cart.svg" alt="" />
+                MUA ONLINE
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-[#fff] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#0b5cad] text-[15px] flex text-center items-center"
+          >
+            <a href="tel:0343446699" class="flex" title="">
+              <img
+                class="w-[15px] mr-[10px]"
+                src="../img/calendar-check-fill.svg"
+                alt=""
+              />
+              <span class="font-bold">GỬI CÂU HỎI</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- animation -->
+    <!-- btn to top -->
+    <script src="../js/btnToTopandhideMenu.js"></script>
+    <!-- animation giowis thieu theo yeu cau -->
+    <!-- <script src="../js/animationQC.js"></script> -->
+    <!-- ẩn hiện menu mobile -->
+    <!-- <script src="../js/menu.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- script click search in header -->
+    <script>
+      const btnSearch = document.getElementById("box-search");
+      const boxSearch = document.getElementById("search-box");
+
+      btnSearch.addEventListener("click", () => {
+        boxSearch.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

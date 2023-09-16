@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>news</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section>
+       <!-- header -->
+       <div
+       class="sticky top-0 z-[1] [transition:height_0.3s] bg-[var(--white)]"
+     >
+       <div class="box-container mx-auto grid grid-cols-12">
+         <div class="col-span-1 md:block hidden" id="box-logo">
+           <img
+             id="logo-header"
+             src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+             alt=""
+           />
+         </div>
+
+         <div class="md:col-span-11 col-span-12 md:pr-[40px] pr-0">
+           <!-- top header -->
+           <div id="top-headers" class="md:block hidden">
+             <ul class="flex justify-end gap-2">
+               <li
+                 class="line-clamp-2 inline-block font-bold t-blue p-[5px] text-[1.1rem]"
+               >
+                 <a href="" class="flex"
+                   ><img class="w-[1rem]" src="../img/cart-fill.svg" /> (0) Giỏ
+                   hàng</a
+                 >
+               </li>
+               <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                 <a href="">Kiểm tra đơn hàng</a>
+               </li>
+               <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                 <a href="">Tuyển dụng</a>
+               </li>
+             </ul>
+           </div>
+           <!-- header -->
+           <nav role="navigation" class="menu">
+             <label
+             for="menu"
+             class="w-full h-[55px] flex justify-between flex-nowrap"
+           >
+             <div>
+               <img
+                 class="w-[30px] h-[30px]"
+                 src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+                 alt=""
+               />
+             </div>
+             <div>
+               <img
+                 class="w-[30px] h-[30px]"
+                 src="../img/menu-svgrepo-com.svg"
+                 alt=""
+               />
+             </div>
+           </label>
+             <input type="checkbox" id="menu" />
+             <ul class="list-mn md:gap-[1rem] flex flex-wrap items-center justify-end !pb-[20px] md:!pb-0">
+               <li class="w-[100%] hidden md:block md:w-auto menu-item uppercase t-blue font-semibold">
+                 <a href="home.html" class="font-bold w-[2.2rem]">
+                   <img class="w-[100%] h-auto" src="../img/home-icon.svg" alt="" />
+                 </a>
+               </li>
+               <li class="w-[100%] block md:!hidden md:w-auto menu-item uppercase t-blue font-semibold">
+                 <a href="home.html" class="font-bold w-[2.2rem]">
+                   Trang chủ
+                 </a>
+               </li>
+               <!-- GIỚI THIỆU -->
+               <li
+                 class="w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+               >
+                 <a
+                   href=""
+                   for="about"
+                   class="t-blue font-bold text-[1rem]"
+                   >GIỚI THIỆU
+                 </a>
+                 <input type="checkbox" id="about" />
+                 <ul class="menu-dropdown">
+                   <li>
+                     <a class="text-[1rem]" href="review-product.html"
+                       >Giới thiệu công ty</a
+                     >
+                   </li>
+                   <li>
+                     <a class="text-[1rem]" href="history-comany.html"
+                       >Lịch sử hình thành</a
+                     >
+                   </li>
+                   <li>
+                     <a class="text-[1rem]" href="vision.html"
+                       >Tầm nhìn sử mệnh</a
+                     >
+                   </li>
+                   <li>
+                     <a class="text-[1rem]" href="diagram-comany.html"
+                       >Sơ đồ công ty</a
+                     >
+                   </li>
+                   <li>
+                     <a class="text-[1rem]" href="achievements.html"
+                       >Thành tích</a
+                     >
+                   </li>
+                 </ul>
+               </li>
+               <li
+                 class=" w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+               >
+                 <a href="" for="about" class="font-bold text-[1rem]"
+                   >TIN TỨC & SỰ KIỆN
+                 </a>
+                 <input type="checkbox" id="about" />
+                 <ul class="menu-dropdown">
+                   <li>
+                     <a class="text-[1rem]" href="news.html">Sự kiện</a>
+                   </li>
+                   <li class="menu-hasdropdown menu-hasflyout">
+                     <a class="text-[1rem]" href="news.html"
+                       >Tin tức nội bộ
+                     </a>
+                   </li>
+                 </ul>
+               </li>
+               <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                 <a href="advise.html" class="font-bold text-[1rem]">Ban cố vấn</a>
+               </li>
+               <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                 <a href="action-news.html" class="font-bold text-[1rem]">HOẠT ĐỘNG</a>
+               </li>
+               <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                 <a href="library.html" class="font-bold text-[1rem]">ẢNH & VIDEO</a>
+               </li>
+               <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
+                 <a href="contact.html" class="font-bold text-[1rem]">LIÊN HỆ</a>
+               </li>
+               <li class="w-[100%] md:w-auto ml-[2rem] md:block flex justify-center">
+                 <button
+                   class="flex items-center gap-2 bg-[#0f4379] text-[1rem] px-[10px] py-[0.4rem] text-[var(--white)] font-bold rounded-2xl"
+                 >
+                   <img
+                     class="h-[0.9rem] w-auto text-[1rem] rounded-2xl"
+                     src="../img/ic_phone.svg"
+                     alt=""
+                   />
+                   0343 44 66 99
+                 </button>
+               </li>
+
+               <li class="relative menu-hasdropdown order-first md:order-last block">
+                 <button
+                   id="box-search"
+                   class="hidden md:block h-[1.9rem] w-[1.9rem] rounded-[100%] border-[1.5px] border-solid border-[var(--blue-dark)]"
+                 >
+                   <img class="h-[0.9rem]" src="../img/ic_search.svg" alt="" />
+                 </button>
+                 <form
+                   action=""
+                   id="search-box"
+                   class="hidden search-mobile animate-slide-in-left"
+                 >
+                   <div
+                     class="menu-dropdown flex flex-nowrap relative p-[15px] md:p-[0] mt-[15px] md:mt-[0] md:absolute top-[143%] right-[0] bg-[#ffffff] [box-shadow:0px_0px_5px_rgb(176,_176,_176)]"
+                   >
+                     <input
+                       class="w-[300px] outline-[none]"
+                       type="text"
+                       placeholder="Nhập từ khóa..."
+                     />
+                     <img
+                       class="cursor-pointer w-[1rem] mr-[10px]"
+                       src="../img/ic_search.svg"
+                       alt=""
+                     />
+                   </div>
+                 </form>
+               </li>
+             </ul>
+           </nav>
+         </div>
+       </div>
+     </div>
+
+      <div class="relative">
+        <div
+          class="w-full h-[200px] relative bg-cover bg-[center_center] bg-no-repeat flex items-center align-middle flex-wrap text-center"
+          style="
+            background-image: url('https://tambinh.vn/wp-content/themes/tam-binh/assets/images/news/bg-news-header.png');
+          "
+          data-ll-status="loaded"
+        >
+          <h1
+            class="w-full font-bold uppercase text-[25px] tracking-[2px] text-[#004c99]"
+          >
+            THƯ VIỆN
+          </h1>
+        </div>
+        <ul
+          class="w-full flex flex-wrap justify-center mb-[42px] p-0 absolute bottom-[-60px]"
+        >
+          <li
+            id="menu-item-394"
+            class="z-[0.1] cursor-pointer bg-[var(--white)] text-[var(--blue-004C99)] block text-[#000] leading-none text-sm px-[20px] py-[10px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
+          >
+            <a href="review-product.html" class="text-[1.1rem]" aria-current="page"
+              >GIỚI THIỆU CÔNG TY</a
+            >
+          </li>
+          <li
+            id="menu-item-395"
+            class="z-[0.1] cursor-pointer bg-[var(--white)] text-[var(--blue-004C99)] block text-[#000] leading-none text-sm px-[20px] py-[10px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
+          >
+            <a href="history-comany.html" class="text-[1.1rem]">LỊCH SỬ HÌNH THÀNH</a>
+          </li>
+          <li
+            id="menu-item-395"
+            class="z-[0.1] cursor-pointer bg-[var(--white)] text-[var(--blue-004C99)] block text-[#000] leading-none text-sm px-[20px] py-[10px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
+          >
+            <a href="vision.html" class="text-[1.1rem]">TẦM NHÌN SỨ MỆNH</a>
+          </li>
+          <li
+            id="menu-item-395"
+            class="z-[0.1] cursor-pointer bg-[var(--white)] text-[var(--blue-004C99)] block text-[#000] leading-none text-sm px-[20px] py-[10px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
+          >
+            <a href="diagram-comany.html" class="text-[1.1rem]">SƠ ĐỒ CÔNG TY</a>
+          </li>
+          <li
+            id="menu-item-395"
+            class="z-[0.1] cursor-pointer bg-[var(--blue-004C99)] text-[var(--white)] block text-[#000] leading-none text-sm px-[20px] py-[10px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
+          >
+            <a href="achievements.html" class="text-[1.1rem]">THÀNH TÍCH</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- slider main -->
+      <div class="container-main-slider pt-[50px] relative">
+        <div
+          class="slide-prev bg-[#EE4023] flex justify-center items-center w-[35px] h-[35px] opacity-100 rounded-tl-[10px] text-[#fff] rounded-br-[10px] outline-[none] absolute z-[10001] top-[0] bottom-[0] left-[10%] m-auto"
+          tabindex="0"
+          role="button"
+          aria-label="Previous slide"
+          aria-disabled="false"
+        >
+          <
+        </div>
+        <div
+          class="slide-next bg-[#EE4023] flex justify-center items-center w-[35px] h-[35px] opacity-100 rounded-tl-[10px] text-[#fff] rounded-br-[10px] outline-[none] absolute z-[10001] top-[0] bottom-[0] right-[10%] m-auto"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+          aria-disabled="false"
+        >
+          >
+        </div>
+        <div class="slider center">
+          <div class="clip md:mx-[0] mx-[30px]">
+            <img
+              class="img169 md:h-full h-[300px]"
+              src="https://tambinh.vn/wp-content/uploads/2018/12/tang-ao-am-va-hoc-bong-cho-hoc-sinh-vung-cao.png"
+            />
+            <div class="detail-slide p-[30px]">
+              <p
+                class="text-[#000] text-[1.1rem] font-bold line-clamp-2 mt-[10px]"
+              >
+                TOP 100 DOANH NGHIỆP BỀN VỮNG NĂM 2018
+              </p>
+              <p>
+                TGĐ Lê Thị Bình là 1 trong 100 doanh nhân Việt Nam tiêu biểu –
+                Cup Thánh Gióng
+              </p>
+            </div>
+          </div>
+          <div class="clip">
+            <img
+              class="img169 md:h-full h-[300px]"
+              src="https://tambinh.vn/wp-content/uploads/2018/12/sao-tam-che-bien-duoc-lieu.png"
+            />
+            <div class="detail-slide p-[30px]">
+              <p
+                class="text-[#000] text-[1.1rem] font-bold line-clamp-2 mt-[10px]"
+              >
+                TOP 100 DOANH NGHIỆP BỀN VỮNG NĂM 2018
+              </p>
+              <p>
+                TGĐ Lê Thị Bình là 1 trong 100 doanh nhân Việt Nam tiêu biểu –
+                Cup Thánh Gióng
+              </p>
+            </div>
+          </div>
+          <div class="clip">
+            <img
+              class="img169 lg:h-full md:h-[500px] h-[300px]"
+              src="https://tambinh.vn/wp-content/uploads/2018/12/san-pham-duoc-kiem-tra-chat-luong-day-du.png"
+            />
+            <div class="detail-slide p-[30px]">
+              <p
+                class="text-[#000] text-[1.1rem] font-bold line-clamp-2 mt-[10px]"
+              >
+                TOP 100 DOANH NGHIỆP BỀN VỮNG NĂM 2018
+              </p>
+              <p>
+                TGĐ Lê Thị Bình là 1 trong 100 doanh nhân Việt Nam tiêu biểu –
+                Cup Thánh Gióng
+              </p>
+            </div>
+          </div>
+          <div class="clip">
+            <img
+              class="img169 md:h-full h-[300px]"
+              src="https://tambinh.vn/wp-content/uploads/2018/12/nha-may-san-xuat-dat-chuan-gmp.png"
+            />
+            <div class="detail-slide p-[30px]">
+              <p
+                class="text-[#000] text-[1.1rem] font-bold line-clamp-2 mt-[10px]"
+              >
+                TOP 100 DOANH NGHIỆP BỀN VỮNG NĂM 2018
+              </p>
+              <p>
+                TGĐ Lê Thị Bình là 1 trong 100 doanh nhân Việt Nam tiêu biểu –
+                Cup Thánh Gióng
+              </p>
+            </div>
+          </div>
+          <div class="clip">
+            <img
+              class="img169 md:h-full h-[300px]"
+              src="https://tambinh.vn/wp-content/uploads/2018/12/kham-benh-cap-thuoc-tang-qua-cho-nguoi-dan.png"
+            />
+            <div class="detail-slide p-[30px]">
+              <p
+                class="text-[#000] text-[1.1rem] font-bold line-clamp-2 mt-[10px]"
+              >
+                TOP 100 DOANH NGHIỆP BỀN VỮNG NĂM 2018
+              </p>
+              <p>
+                TGĐ Lê Thị Bình là 1 trong 100 doanh nhân Việt Nam tiêu biểu –
+                Cup Thánh Gióng
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+        <div class="flex justify-center text-[2rem] font-bold text-[var(--blue-dark)] mb-[30px]" >
+            GIẢI THƯỞNG TÂM BÌNH
+        </div>
+        <div class="grid grid-cols-12 gap-[25px]">
+            <div class="grid grid-cols-12 col-span-4 bg-[var(--white)] p-[20px] gap-[10px] rounded-tl-[18px] rounded-br-[18px] rounded-tr-[0] rounded-bl-[0]">
+                <img class="col-span-4" src="https://tambinh.vn/wp-content/uploads/2021/02/Top-5-dong-duoc-2021.jpg">
+                </img>
+    
+                <div class="col-span-8 text-[#000] text-[1rem] flex items-center font-bold">
+                    TOP 5 CÔNG TY ĐÔNG DƯỢC UY TÍN HAI NĂM LIÊN TIẾP (2020 + 2021)
+                </div>
+            </div>
+            <div class="grid grid-cols-12 col-span-4 bg-[var(--white)] p-[20px] gap-[10px] rounded-tl-[18px] rounded-br-[18px] rounded-tr-[0] rounded-bl-[0]">
+              <img class="col-span-4" src="https://tambinh.vn/wp-content/uploads/2021/02/Top-5-dong-duoc-2021.jpg">
+              </img>
+  
+              <div class="col-span-8 text-[#000] text-[1rem] flex items-center font-bold">
+                  TOP 5 CÔNG TY ĐÔNG DƯỢC UY TÍN HAI NĂM LIÊN TIẾP (2020 + 2021)
+              </div>
+          </div>
+          <div class="grid grid-cols-12 col-span-4 bg-[var(--white)] p-[20px] gap-[10px] rounded-tl-[18px] rounded-br-[18px] rounded-tr-[0] rounded-bl-[0]">
+            <img class="col-span-4" src="https://tambinh.vn/wp-content/uploads/2021/02/Top-5-dong-duoc-2021.jpg">
+            </img>
+
+            <div class="col-span-8 text-[#000] text-[1rem] flex items-center font-bold">
+                TOP 5 CÔNG TY ĐÔNG DƯỢC UY TÍN HAI NĂM LIÊN TIẾP (2020 + 2021)
+            </div>
+        </div>
+        </div>
+        
+
+        <div class="my-[40px] flex justify-center flex-wrap">
+          <p class="text-center font-bold w-full">DANH SÁCH THÀNH TÍCH KHEN THƯỞNG CÔNG TY DƯỢC PHẨM TÂM BÌNH</p>
+          <table class="mt-[20px]"> 
+            <tbody> 
+              <tr> <td width="131"> <p><strong>Năm</strong></p> </td> 
+              <td width="522"> <p><strong>Hình thức khen thưởng (5 năm gần nhất)</strong></p> 
+              </td> </tr> <tr> <td rowspan="5" width="131"> <p>2021</p>
+              </td> <td width="522"> <p>Top 5 Công ty đông dược uy tín Việt Nam</p> 
+              </td> </tr> <tr> <td width="522"> <p>Top 1 Hàng Việt Nam được người tiêu dùng yêu thích</p> 
+              </td> </tr> <tr> <td width="522"> <p>Sản phẩm vàng Vì sức khỏe cộng đồng</p> </td> </tr> 
+              <tr> <td width="522"> <p>Top 100 sản phẩm tin dùng</p> </td> </tr> <tr> 
+                <td width="522"> <p>Cờ thi đua của Tổng liên đoàn lao động Việt Nam</p> 
+                </td> </tr> <tr> <td rowspan="8" width="131"> <p>2020</p> </td> 
+                  <td width="522"> <p>Top 5 Công ty đông dược uy tín Việt Nam</p> </td> </tr> 
+                  <tr> <td width="522"> <p>Top 10 Thương hiệu mạnh quốc gia</p> </td> </tr> 
+                  <tr> <td width="522"> <p>Top 10 Thương hiệu hàng đầu Việt Nam</p> </td> </tr> 
+                  <tr> <td width="522"> <p>Doanh nghiệp, doanh nhân xuất sắc</p> </td> </tr> 
+                  <tr> <td width="522"> <p>Hàng Việt Nam chất lượng cao</p> </td> </tr> 
+                  <tr> <td width="522"> <p>Top 1 Hàng Việt Nam được người tiêu dùng yêu thích</p> </td> </tr> 
+                  <tr> <td width="522"> <p>Top 20 sản phẩm vàng Việt Nam</p> </td> </tr> 
+                  <tr> <td width="522"> <p>Sản phẩm an toàn vì sức khỏe cộng đồng</p> </td> </tr> 
+                  <tr> <td rowspan="6" width="131"> <p>2019</p> </td> <td width="522">
+                     <p>Top 1 Hàng Việt Nam được người tiêu dùng yêu thích</p> </td> </tr> 
+                     <tr> <td width="522"> <p>Hàng Việt Nam chất lượng cao</p> </td> </tr> 
+                     <tr> <td width="522"> <p>Top 50 nhãn hiệu hàng đầu Việt Nam</p> </td> 
+                    </tr> <tr> <td width="522"> <p>Top 20 sản phẩm vàng Việt Nam&nbsp;</p> </td> 
+                    </tr> <tr> <td width="522"> <p>TGĐ Lê Thị Bình là 1 trong 100 doanh nhân Việt Nam tiêu biểu – Cup Thánh Gióng</p> </td> 
+                    </tr> <tr> <td width="522"> <p>Bằng khen của Tổng LĐLĐ Việt Nam cho công đoàn công ty</p> </td> </tr> 
+                    <tr> <td rowspan="10" width="131"> <p>2018</p> </td> <td width="522"> <p>Top 100 Doanh nghiệp phát triển bền vững</p> <p>(Do Phòng Thương mại và công nghiệp Việt Nam VCCI trao tặng)</p> </td> 
+                    </tr> <tr> <td width="522"> <p>Top 60 Doanh nghiệp tiêu biểu Vì người lao động</p> <p>(Do Tổng LĐLĐ Việt Nam, Bộ LĐTB&amp;XH, phòng thương mại và công nghiệp Việt Nam trao tặng)</p> </td> </tr> <tr> <td width="522"> <p>Doanh nghiệp thương hiệu Việt tiêu biểu</p> <p>(Do Bộ công thương trao tặng)</p> </td> </tr> <tr> <td width="522"> <p>Bằng khen của Bộ trưởng Bộ y tế</p> </td> </tr> <tr> <td width="522"> <p>Bằng khen của UBND TP. Hà Nội</p> </td> </tr> <tr> <td width="522"> <p>Bằng khen của Trung ương Hội giáo dục chăm sóc sức khỏe cộng đồng</p> <p>&nbsp;Việt Nam</p> </td> </tr> <tr> <td width="522"> <p>Hàng Việt Nam chất lượng cao</p> </td> </tr> <tr> <td width="522"> <p>Top 1 Hàng Việt Nam được người tiêu dùng yêu thích</p> </td> </tr> <tr> <td width="522"> <p>Cờ thi đua trong phong trào “Xanh – sạch – đẹp – đảm bảo An toàn vệ sinh lao động”</p> </td> </tr> <tr> <td width="522"> <p>Bằng khen của Tổng liên đoàn lao động Việt Nam</p> </td> </tr> <tr> <td rowspan="5" width="131"> <p>2017</p> </td> <td width="522"> <p>Bằng khen của UBND TP. Hà Nội</p> </td> </tr> <tr> <td width="522"> <p>TGĐ Lê Thị Bình nhận danh hiệu Top 10 Phụ nữ tiêu biểu Thủ đô</p> </td> </tr> <tr> <td width="522"> <p>Sản phẩm vàng Vì sức khỏe cộng đồng</p> </td> </tr> <tr> <td width="522"> <p>Top 1 Hàng Việt Nam được người tiêu dùng yêu thích</p> </td> </tr> <tr> <td width="522"> <p>Giấy khen của Sở công thương Hà Nội</p> </td> </tr> </tbody> </table>
+        </div>
+    </div>
+
+      <!-- footer -->
+      <footer
+        class="md:pt-[0] pt-[20px] px-[8.3333333333%] pb-[100px] bg-[#0d4b89] text-[#fff] flex items-start flex-wrap"
+      >
+        <a
+          class="relative md:block hidden p-[20px] bg-[#fff] rounded-tl-[0] rounded-br-[15px] rounded-tr-[0] rounded-bl-[0] text-xs"
+          href=""
+          ><img
+            src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.png"
+            alt="#"
+        /></a>
+
+        <div class="md:pt-[30px] md:px-[60px] pb-[0] md:w-[35%]">
+          <div class="mb-[0.5rem]" static-id="8">
+            <span
+              class="font-bold"
+              data-sheets-value='{"1":2,"2":"CÔNG TY TNHH SX &amp; TM DƯỢC PHẨM TÂM BÌNH"}'
+              data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+              >CÔNG TY TNHH SX &amp; TM DƯỢC PHẨM TÂM BÌNH</span
+            >
+          </div>
+          <!-- <div class="footer-tax-code" static-id="57">MST/ĐKKD/QĐTL: 0102190173</div> -->
+          <div class="footer-branch-addrs" static-id="12">
+            <a
+              target="_blank"
+              rel="nofollow, noopener"
+              href="https://goo.gl/maps/KxMEBLVK3ytwmn8E6"
+              title="Google map"
+              >Địa chỉ: 349 Kim Mã, Q.Ba Đình, Hà Nội</a
+            >
+          </div>
+          <div
+            class="pb-[15px] mb-[15px] relative [border-bottom:1px_solid_#ffffff81]"
+          >
+            Điện thoại:
+            <a href="tel:02437245678">(024) 3724 5678</a>
+            <span>-</span>
+            <a href="tel:02437345600">(024) 3734 5600</a>
+            <div class="footer-addrs">
+              Email: duocpham@tambinh.vn <br />Giấy chứng nhận ĐKKD số
+              0102190173 do Sở Kế hoạch và Đầu tư TP.HN cấp ngày 20/03/2007
+            </div>
+          </div>
+
+          <!-- == -->
+
+          <div class="mb-[0.5rem]" static-id="13">
+            <span
+              class="font-bold"
+              data-sheets-value='{"1":2,"2":"CHI NHÁNH DƯỢC PHẨM TÂM BÌNH SÀI GÒN"}'
+              data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+              >CHI NHÁNH DƯỢC PHẨM TÂM BÌNH SÀI GÒN</span
+            >
+          </div>
+          <div class="footer-branch-addrs" static-id="12">
+            <a
+              target="_blank"
+              rel="nofollow, noopener"
+              href="https://g.page/Tambinhsaigon?share"
+              title="Google map"
+              >Địa chỉ 243/9/21 Tô Hiến Thành, Phường 13 Quận 10, TP.HCM</a
+            >
+          </div>
+          <div class="footer-phone">
+            Điện thoại:
+            <a href="tel:02838623944">(028) 3862 3944</a>
+            <span>-</span>
+            <a href="tel:02838623945">(028) 3862 3945</a>
+          </div>
+          <!-- == -->
+          <div class="footer-hotline">
+            <strong
+              >Hotline tư vấn:
+              <a href="tel:0343446699">0343 44 66 99</a></strong
+            >
+          </div>
+        </div>
+        <div class="md:pt-[30px] md:w-[30%] md:pr-[30px]">
+          <div
+            class="pb-[15px] mb-[15px] relative [border-bottom:1px_solid_#ffffff81]"
+          >
+            <div class="footer-company help-ttu help-fwb" static-id="15">
+              <span
+                class="font-bold"
+                data-sheets-value='{"1":2,"2":"NHÀ MÁY SẢN XUẤT DƯỢC PHẨM TÂM BÌNH"}'
+                data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+                >NHÀ MÁY SẢN XUẤT GMP DƯỢC PHẨM TÂM BÌNH</span
+              >
+            </div>
+            <div class="footer-branch-addrs" static-id="12">
+              <a
+                target="_blank"
+                rel="nofollow, noopener"
+                href="https://goo.gl/maps/V58i7q8YE1wMQJhT7"
+                title="Google map"
+                >Địa chỉ: Lô CN03 - 12 Khu CN Ninh Hiệp, Gia Lâm, Hà Nội</a
+              >
+            </div>
+            <div class="footer-phone _line">
+              Điện thoại:
+              <a href="tel:02437245678">(024) 3696 3454</a>
+              <span>-</span>
+              <a href="tel:02437345600">(024) 3734 5600</a>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-[calc(((100%_-_15px)_/_3)_*_1.75)] mr-[15px]">
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách biên tập</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách bảo mật thông tin</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách kiểm hàng, đổi trả và hoàn tiền</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách vận chuyển</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách mua hàng – Thanh toán</a
+              >
+            </div>
+
+            <div class="w-[calc(((100%_-_15px)_/_3)_*_1.25)]">
+              <a href=""
+                ><img
+                  src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/icon1.png"
+                  data-src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/icon1.png"
+                  class="[135px] w-full h-auto mb-[1rem]"
+              /></a>
+              <a href="" title="DMCA.com Protection Status" class="dmca-badge">
+                <img
+                  src="https://images.dmca.com/Badges/_dmca_premi_badge_5.png?ID=e50d6272-11e9-48b8-b103-2fc7569708e9"
+                  alt="DMCA.com Protection Status"
+                  class="[135px] w-full h-auto"
+                  data-ll-status="loaded"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="md:pt-[30px] md:w-[20%]">
+          <div class="font-bold uppercase mb-[1rem]">
+            Đăng ký để theo dõi Tâm Bình
+          </div>
+          <form
+            id="subscribe_email_footer"
+            action=""
+            method="POST"
+            class="relative overflow-hidden mt-[20px]"
+          >
+            <div class="form-group" id="form-fields-footer">
+              <input
+                type="email"
+                placeholder="Nhập email của bạn "
+                class="text-[#000] font-[Montserrat] text-xs float-left w-full outline-[none] border-none h-[40px] px-[10px] py-[0]"
+                id="subscribe_email"
+                name="subscribe_email"
+              />
+              <button
+                type="submit"
+                id="btn-register"
+                name="action"
+                class="btn btn-default"
+              >
+                <img
+                  class="block absolute right-[10px] top-[9px] border-none outline-[none] z-[1] cursor-pointer bg-transparent w-[20px]"
+                  src="../img/send.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="form-result-message"></div>
+          </form>
+          <ul class="mt-[25px] mx-[0] mb-[0] pl-0">
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href=""
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/facebook.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://zalo.me/0865344349"
+                target="_blank"
+                class="inline-block float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                >Zalo</a
+              >
+            </li>
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href="https://www.youtube.com/c/TambinhVn"
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/instagram.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href="https://www.linkedin.com/in/duoctambinh/"
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/twitter.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href=""
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/youtube.svg" alt=""
+              /></a>
+            </li>
+            <p style="clear: both">
+              Cố vấn chuyên môn nội dung <br /><b>Ths.Bs Nguyễn Thị Hằng</b>
+            </p>
+          </ul>
+        </div>
+      </footer>
+
+      <div
+        class="hidden md:block [border-top:2px_solid_#ee4023] bg-[#0b5cad] px-[0] py-[10px] text-[#fff] fixed w-full left-[0] bottom-[0] z-[1001]"
+      >
+        <div class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+          <div class="flex justify-between">
+            <div class="flex gap-[20px]">
+              <div
+                class="bg-[#fff] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#0b5cad] text-[15px] flex text-center"
+              >
+                <a href="tel:0343446699" class="flex" title="">
+                  <img
+                    class="w-[12px] mr-[10px]"
+                    src="../img/ic_phone-blue.svg"
+                    alt=""
+                  />
+                  <span class="font-bold">0343 44 66 99</span>
+                </a>
+              </div>
+              <div class="">
+                <a
+                  class="bg-[#ee4023] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#ffffff] text-[15px] flex items-center text-center font-bold"
+                  href=""
+                  title=""
+                  id="ffb"
+                >
+                  <img
+                    class="w-[15px] mr-[10px]"
+                    src="../img/cart.svg"
+                    alt=""
+                  />
+                  MUA ONLINE
+                </a>
+              </div>
+            </div>
+            <div
+              class="bg-[#fff] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#0b5cad] text-[15px] flex text-center items-center"
+            >
+              <a href="tel:0343446699" class="flex" title="">
+                <img
+                  class="w-[15px] mr-[10px]"
+                  src="../img/calendar-check-fill.svg"
+                  alt=""
+                />
+                <span class="font-bold">GỬI CÂU HỎI</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .container-main-slider {
+          position: relative;
+          margin-bottom: 40px;
+        }
+        .clip {
+          width: fit-content;
+          display: flex;
+          justify-content: center;
+          bottom: 0;
+        }
+
+        .center .slick-slide {
+        }
+
+        .center .slick-center .detail-slide {
+          opacity: 1;
+        }
+
+        .center .detail-slide {
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+        }
+        .center .slick-center img {
+          transform: scale(1);
+          opacity: 1;
+          filter: none;
+        }
+        .center img {
+          opacity: 0.5;
+          transition: all 300ms ease;
+          transform: scale(0.9);
+          position: relative;
+          filter: grayscale(100%);
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </div>
+
+    </section>
+
+    <!-- animation -->
+    <!-- btn to top -->
+    <script src="../js/btnToTopandhideMenu.js"></script>
+    <!-- animation giowis thieu theo yeu cau -->
+    <!-- <script src="../js/animationQC.js"></script> -->
+    <!-- ẩn hiện menu mobile -->
+    <!-- <script src="../js/menu.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const $jq = jQuery.noConflict();
+
+      jQuery(".center").slick({
+        centerMode: true,
+        infinite: true,
+        centerPadding: "0px",
+        speed: 500,
+        variableWidth: true,
+        prevArrow: ".slide-prev",
+        nextArrow: ".slide-next",
+      });
+
+      jQuery(".culture-slider").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: ".culture-prev",
+        nextArrow: ".culture-next",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+
+      jQuery(".action-slider").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: ".action-prev",
+        nextArrow: ".action-next",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+
+      jQuery(".responsive-slider").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: ".review-cty-prev",
+        nextArrow: ".review-cty-next",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+
+    <script>
+      var btnNewFeed = document.getElementById("newfeed-box");
+      var btnEvent = document.getElementById("event-box");
+      var boxNewFeed = document.getElementById("newfeed-box-content");
+      var boxEvent = document.getElementById("event-box-content");
+
+      btnNewFeed.addEventListener("click", () => {
+        btnNewFeed.classList.add("bg-[var(--blue-004C99)]");
+        btnNewFeed.classList.add("text-[var(--white)]");
+        btnNewFeed.classList.remove("bg-[var(--white)]");
+        btnNewFeed.classList.remove("text-[var(--blue-004C99)]");
+        btnEvent.classList.remove("bg-[var(--blue-004C99)]");
+        btnEvent.classList.remove("text-[var(--white)]");
+        btnEvent.classList.add("bg-[var(--white)]");
+        btnEvent.classList.add("text-[var(--blue-004C99)]");
+        boxNewFeed.classList.add("hidden");
+        boxEvent.classList.remove("hidden");
+      });
+
+      btnEvent.addEventListener("click", () => {
+        btnEvent.classList.add("bg-[var(--blue-004C99)]");
+        btnEvent.classList.add("text-[var(--white)]");
+        btnEvent.classList.remove("bg-[var(--white)]");
+        btnEvent.classList.remove("text-[var(--blue-004C99)]");
+        btnNewFeed.classList.remove("bg-[var(--blue-004C99)]");
+        btnNewFeed.classList.remove("text-[var(--white)]");
+        btnNewFeed.classList.add("bg-[var(--white)]");
+        btnNewFeed.classList.add("text-[var(--blue-004C99)]");
+        boxNewFeed.classList.remove("hidden");
+        boxEvent.classList.add("hidden");
+      });
+    </script>
+
+    <script>
+      var btnVideo = document.getElementById("video-btn");
+      var btnVTC = document.getElementById("tvc-btn");
+      var boxVideo = document.getElementById("video-box");
+      var boxTCV = document.getElementById("tvc-box");
+
+      btnVideo.addEventListener("click", () => {
+        btnVideo.classList.add("bg-[var(--blue-004C99)]");
+        btnVideo.classList.add("text-[var(--white)]");
+        btnVideo.classList.remove("bg-[var(--white)]");
+        btnVideo.classList.remove("text-[var(--blue-004C99)]");
+        btnVTC.classList.remove("bg-[var(--blue-004C99)]");
+        btnVTC.classList.remove("text-[var(--white)]");
+        btnVTC.classList.add("bg-[var(--white)]");
+        btnVTC.classList.add("text-[var(--blue-004C99)]");
+        boxVideo.classList.add("hidden");
+        boxTCV.classList.remove("hidden");
+      });
+
+      btnVTC.addEventListener("click", () => {
+        btnVTC.classList.add("bg-[var(--blue-004C99)]");
+        btnVTC.classList.add("text-[var(--white)]");
+        btnVTC.classList.remove("bg-[var(--white)]");
+        btnVTC.classList.remove("text-[var(--blue-004C99)]");
+        btnVideo.classList.remove("bg-[var(--blue-004C99)]");
+        btnVideo.classList.remove("text-[var(--white)]");
+        btnVideo.classList.add("bg-[var(--white)]");
+        btnVideo.classList.add("text-[var(--blue-004C99)]");
+        boxTCV.classList.add("hidden");
+        boxVideo.classList.remove("hidden");
+      });
+    </script>
+
+    <!-- script click search in header -->
+    <script>
+      const btnSearch = document.getElementById("box-search");
+      const boxSearch = document.getElementById("search-box");
+
+      btnSearch.addEventListener("click", () => {
+        boxSearch.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
