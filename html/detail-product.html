@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>news</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="bg-[#F9F7EE]">
+      <!-- header -->
+      <div
+        class="sticky top-0 z-[1000] [transition:height_0.3s] bg-[var(--white)]"
+      >
+        <div class="box-container mx-auto grid grid-cols-12">
+          <div class="col-span-1 md:block hidden" id="box-logo">
+            <img
+              id="logo-header"
+              src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="md:col-span-11 col-span-12 md:pr-[40px] pr-0">
+            <!-- top header -->
+            <div id="top-headers" class="md:block hidden">
+              <ul class="flex justify-end gap-2">
+                <li
+                  class="line-clamp-2 inline-block font-bold t-blue p-[5px] text-[1.1rem]"
+                >
+                  <a href="" class="flex"
+                    ><img class="w-[1rem]" src="../img/cart-fill.svg" /> (0) Giỏ
+                    hàng</a
+                  >
+                </li>
+                <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                  <a href="">Kiểm tra đơn hàng</a>
+                </li>
+                <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                  <a href="">Tuyển dụng</a>
+                </li>
+              </ul>
+            </div>
+            <!-- header -->
+            <nav role="navigation" class="menu">
+              <label
+                for="menu"
+                class="w-full h-[55px] flex justify-between flex-nowrap"
+              >
+                <div>
+                  <img
+                    class="w-[30px] h-[30px]"
+                    src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="w-[30px] h-[30px]"
+                    src="../img/menu-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
+              </label>
+              <input type="checkbox" id="menu" />
+              <ul
+                class="list-mn md:gap-[1rem] flex flex-wrap items-center justify-end !pb-[20px] md:!pb-0"
+              >
+                <li
+                  class="w-[100%] hidden md:block md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="home.html" class="font-bold w-[2.2rem]">
+                    <img
+                      class="w-[100%] h-auto"
+                      src="../img/home-icon.svg"
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li
+                  class="w-[100%] block md:!hidden md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="home.html" class="font-bold w-[2.2rem]">
+                    Trang chủ
+                  </a>
+                </li>
+                <!-- GIỚI THIỆU -->
+                <li
+                  class="w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+                >
+                  <a href="" for="about" class="t-blue font-bold text-[1rem]"
+                    >GIỚI THIỆU
+                  </a>
+                  <input type="checkbox" id="about" />
+                  <ul class="menu-dropdown">
+                    <li>
+                      <a class="text-[1rem]" href="review-product.html"
+                        >Giới thiệu công ty</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="history-comany.html"
+                        >Lịch sử hình thành</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="vision.html"
+                        >Tầm nhìn sử mệnh</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="diagram-comany.html"
+                        >Sơ đồ công ty</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="achievements.html"
+                        >Thành tích</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+                >
+                  <a href="" for="about" class="font-bold text-[1rem]"
+                    >TIN TỨC & SỰ KIỆN
+                  </a>
+                  <input type="checkbox" id="about" />
+                  <ul class="menu-dropdown">
+                    <li>
+                      <a class="text-[1rem]" href="news.html">Sự kiện</a>
+                    </li>
+                    <li class="menu-hasdropdown menu-hasflyout">
+                      <a class="text-[1rem]" href="news.html"
+                        >Tin tức nội bộ
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="advise.html" class="font-bold text-[1rem]"
+                    >Ban cố vấn</a
+                  >
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="action-news.html" class="font-bold text-[1rem]"
+                    >HOẠT ĐỘNG</a
+                  >
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="library.html" class="font-bold text-[1rem]"
+                    >ẢNH & VIDEO</a
+                  >
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="contact.html" class="font-bold text-[1rem]"
+                    >LIÊN HỆ</a
+                  >
+                </li>
+                <li
+                  class="w-[100%] md:w-auto ml-[2rem] md:block flex justify-center"
+                >
+                  <button
+                    class="flex items-center gap-2 bg-[#0f4379] text-[1rem] px-[10px] py-[0.4rem] text-[var(--white)] font-bold rounded-2xl"
+                  >
+                    <img
+                      class="h-[0.9rem] w-auto text-[1rem] rounded-2xl"
+                      src="../img/ic_phone.svg"
+                      alt=""
+                    />
+                    0343 44 66 99
+                  </button>
+                </li>
+
+                <li
+                  class="relative menu-hasdropdown order-first md:order-last block"
+                >
+                  <button
+                    id="box-search"
+                    class="hidden md:block h-[1.9rem] w-[1.9rem] rounded-[100%] border-[1.5px] border-solid border-[var(--blue-dark)]"
+                  >
+                    <img class="h-[0.9rem]" src="../img/ic_search.svg" alt="" />
+                  </button>
+                  <form
+                    action=""
+                    id="search-box"
+                    class="hidden search-mobile animate-slide-in-left"
+                  >
+                    <div
+                      class="menu-dropdown flex flex-nowrap relative p-[15px] md:p-[0] mt-[15px] md:mt-[0] md:absolute top-[143%] right-[0] bg-[#ffffff] [box-shadow:0px_0px_5px_rgb(176,_176,_176)]"
+                    >
+                      <input
+                        class="w-[300px] outline-[none]"
+                        type="text"
+                        placeholder="Nhập từ khóa..."
+                      />
+                      <img
+                        class="cursor-pointer w-[1rem] mr-[10px]"
+                        src="../img/ic_search.svg"
+                        alt=""
+                      />
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto p-[20px] md:p-0">
+        <div class="relative">
+            <div class="grid grid-cols-12 mt-[30px] gap-[20px] md:before:content-[''] before:hidden md:before:block before:absolute before:bottom-[0] before:left-[0] before:right-[0] before:h-full before:bg-[url('../img/bg-up.png')] before:pointer-events-none before:bg-no-repeat before:bg-[center_bottom] before:bg-contain">
+                <div class="md:col-span-1"></div>
+              <div class="col-span-12 md:col-span-5 px-[50px] pb-[40px] z-[0.1] relative">
+              <div class="before:content-[''] before:block md:before:hidden before:absolute before:bottom-[0] before:left-[0] before:right-[0] before:h-full before:bg-[url('../img/bg-up.png')] before:pointer-events-none before:bg-no-repeat before:bg-[center_bottom] before:bg-contain">
+                <div id="page">
+                  <div class="row">
+                    <div class="column small-11 small-centered">
+                      <div class="slider slider-single">
+                        <div>
+                          <img
+                            class="img55"
+                            src="https://png.pngtree.com/png-clipart/20230511/original/pngtree-3d-skin-care-products-exquisite-care-products-png-image_9157460.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <img
+                            class="img55"
+                            src="https://png.pngtree.com/png-clipart/20230511/original/pngtree-3d-skin-care-products-transparent-png-image_9157477.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="slider slider-nav">
+                        <div>
+                            <img
+                              class="img55"
+                              src="https://png.pngtree.com/png-clipart/20230511/original/pngtree-3d-skin-care-products-exquisite-care-products-png-image_9157460.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>
+                            <img
+                              class="img55"
+                              src="https://png.pngtree.com/png-clipart/20230511/original/pngtree-3d-skin-care-products-transparent-png-image_9157477.png"
+                              alt=""
+                            />
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-span-12 md:col-span-5 z-[1]">
+                <div class="detail-price">
+                  <h1
+                    style="
+                      color: #004c99;
+                      font-size: 24px;
+                      text-transform: uppercase;
+                    "
+                    class="mb-[10px] font-bold"
+                  >
+                    Viên khớp Tâm Bình
+                  </h1>
+                  <div class="h-[1px] w-[60px] bg-[#9C0A14] mb-[1em]"></div>
+                  <div class="line-clamp-3">
+                    Hỗ trợ giảm các triệu chứng của thoái hóa khớp và viêm khớp. Hỗ
+                    trợ giảm đau nhức xương khớp, đau mỏi cơ bắp, làm chậm quá trình
+                    thoái hóa…<span class="text-[#ff0000] cursor-pointer"
+                      >[Xem thêm]</span
+                    >
+                  </div>
+                  <div class="mt-[20px]">số lượng : 6</div>
+    
+                  <div class="w-full mt-[30px] h-[48px] bg-[#EF3E1E] text-[#fff] overflow-hidden flex rounded-tl-[10px] rounded-br-[10px] mb-[15px]">
+                    <button
+                      type="submit"
+                      class="bg-none font-bold border-none text-[#fff] cursor-pointer  w-1/2 text-2xl">
+                      MUA NGAY
+                    </button>
+                    <div class="w-1/2 float-right text-[25px] font-bold m-auto text-center leading-[25px] [border-left:1px_solid_#fff]">96.000 Đ</div>
+                  </div>
+                  <div class="w-full mt-[40px] bg-[#fdefdb] rounded-[10px] text-[#1b1b1b] px-[20px] py-[15px] text-center">
+                    <a href="" target="_blank">
+                        <p class="text-lg text-[#1b1b1b] mb-2 font-bold">Xem danh sách nhà thuốc có bán<br><span class="text-[#ee4023] uppercase">Viên khớp Tâm Bình</span> tại</p>
+                        <p class="text-[23px] text-[#004c99] font-bold">Toàn Quốc</p>
+                        <div class="block mx-auto mt-[15px] leading-none text-sm text-[#fff] p-[14px] border-[1px] border-solid border-[rgba(27,27,27,.1)] text-center [transition:all_.3s_ease] bg-[#ee4023] uppercase font-bold w-[130px] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0]">Xem thêm</div>
+                    </a>   
+                    
+    
+                </div>
+    
+                </div>
+              </div>
+              <div class="md:col-span-1"></div>
+            </div>
+        </div>
+
+        <div class="mt-[40px]" id="detail-product">
+            <h1 class="text-[#004C99] text-2xl font-semibold uppercase">THÔNG TIN SẢN PHẨM</h1>
+
+            <div class="grid grid-cols-12 gap-[20px]">
+                <div class="md:col-span-8 col-span-12">
+  <!-- render content -->
+  <div class="p-[30px] mt-[20px] bg-[#ffffff]">
+    <div class="mt-[30px]" style="line-height: 34px">
+        <p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><strong>Serum là gì?&nbsp;</strong></span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum tương tự như kem dưỡng. Tuy nhiên nó có tác động dưỡng chuyên sâu hơn, hiệu quả hơn. Tác động nhanh hơn và có thể phục hồi nhanh hơn.&nbsp;</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum là một dạng tinh chất. Trong serum chứa nhiều hoạt chất cao cấp. Theo nhiều nghiên cứu, nó cho hiệu quả gấp 10 lần kem dưỡng.&nbsp;</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Cùng với tên gọi serum, nhiều người còn gọi sản phẩm với tên gọi huyết thanh. Đa phần chúng đều trong suốt, có màu hoặc không màu. Hình thức của serum là dạng lỏng, cấu tạo từ những phân tử siêu nhỏ.</span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><img alt="CÔNG TY TNHH MỸ PHẨM VNCOS" src="https://lh3.googleusercontent.com/QrCtU3A6Uh7dp0ozzQzKXwxor1o8JP2HtBPyVCwqs4HeGq76sO8B2eZvw8qmgMl5qQzVicdFgxF__Kvn9BFttAX7gba4gqR6ZyLSj7QZWSbGs1jm-9ara-lkDqkVh0cAw82aSPOyhgIwwFwePevuCw" style="height:325px; width:500px"></span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:10pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><em>Serum là những tinh chất phân tử siêu nhỏ, khả năng thẩm thấu gấp 10 lần kem dưỡng</em></span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum thường được chứa trong những lọ nhỏ. Mỗi lần sử dụng chỉ cần vài giọt là đã có thể đạt được hiệu quả bao phủ và dưỡng da tốt nhất. Vì được cấu tạo từ phân tử nên nó có thể đạt được hiệu quả thấm sâu tốt nhất. Nó không chỉ chăm sóc da, tóc ở lớp biểu bì. Nó sẽ thấm sâu vào tầng hạ bì và giải quyết nhanh chóng mọi vấn đề da đang gặp phải.</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum là sản phẩm chăm sóc da, tóc toàn diện nhất hiện nay. Sản phẩm thích hợp cho mọi lứa tuổi. Thông thường, giá thành của serum rất đắt đỏ. Vì vậy, gia công serum cũng cần công nghệ chiết tách cao. Thành phần nguyên liệu cũng độc đáo, đặc thù, tinh chất đậm đặc để có thể phát huy hiệu quả tối đa nhất.</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum đang là một trong những chọn lựa kinh doanh tuyệt vời nhất cho các thương hiệu mỹ phẩm. Bất cứ ai cũng mong muốn có được làn da đẹp, mái tóc suôn mềm chắc khỏe. Thay vì chờ đợi hiệu quả lâu từ các loại kem dưỡng, serum chính là chọn lựa tuyệt vời nhất.</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Cũng chính từ điều này, gia công serum đang trở thành một trong những nhu cầu hàng đầu trong ngành gia công mỹ phẩm. Những nhà máy gia công luôn nhận được nhiều đơn hàng từ các nhà kinh doanh mỹ phẩm.&nbsp;</span></span></span></p>
+
+<h2><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><strong>Phân loại serum có thể gia công&nbsp;</strong></span></span></span></h2>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Có rất nhiều dòng serum. Tùy vào nhu cầu, bạn có thể chọn gia công một hoặc nhiều loại serum sau đây:</span></span></span></p>
+
+<ol>
+<li style="list-style-type:decimal">
+<h3 style="color:#696969; font-style:normal"><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum dưỡng ẩm và phục hồi da</span></span></span></h3>
+</li>
+</ol>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Những loại serum dưỡng ẩm cũng như phục hồi da rất đậm đặc. Nó thường chứa hàm lượng dưỡng chất cao. Điển hình như các loại vitamin, các hoạt chất hyaluronic axit…&nbsp;</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Công dụng của những loại này là duy trì độ ẩm. Chúng cũng cho hiệu quả phục hồi hư tổn cho da, xóa sẹo, làm đầy, tăng sinh collagen giúp da chắc khỏe, sáng mịn.</span></span></span></p>
+
+<ol start="2">
+<li style="list-style-type:decimal">
+<h3 style="color:#696969; font-style:normal"><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum dưỡng trắng da</span></span></span></h3>
+</li>
+</ol>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum dưỡng trắng da chứa các hạt phân tử siêu nhỏ. Nó cũng cần phải có các hoạt chất chuyên về dưỡng trắng da. Thành phần của serum làm trắng thường từ vitamin C và chiết xuất từ các loại hoa. Chúng có công dụng thấm sâu dưới lớp biểu bì. Đồng thời ức chế melanin để làm trắng da. Serum dưỡng trắng da có thể kích thích sản sinh các tế bào mới, nuôi dưỡng da từ sâu bên trong để duy trì hiệu quả làm trắng lâu dài.</span></span></span></p>
+
+<ol start="3">
+<li style="list-style-type:decimal">
+<h3 style="color:#696969; font-style:normal"><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum trị nám cho da</span></span></span></h3>
+</li>
+</ol>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Đây cũng là một trong những loại sản phẩm nhận được đơn đặt hàng gia công serum nhiều nhất. Tình trạng nám da, sạm da của người Việt rất phổ biến. Với khí hậu Việt, nỗi lo sạm nám luôn khiến nhiều chị em đau đầu.</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Sản xuất và gia công serum trị nám trở thành nhu cầu hàng đầu hiện nay. Sản phẩm nhận được sự quan tâm lớn từ thị trường. Công dụng của các loại serum trị nám chính là làm mờ nhanh chóng những vết thâm nám. Từ đó, làn da sẽ có sự phục hồi nhanh chóng. Một làn da tràn đầy sức sống sẽ trở lại giúp chị em có thể tự tin tỏa sáng trong mọi hoàn cảnh.&nbsp;</span></span></span></p>
+
+<ol start="4">
+<li style="list-style-type:decimal">
+<h3 style="color:#696969; font-style:normal"><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum ngừa mụn, trị mụn</span></span></span></h3>
+</li>
+</ol>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Đây cũng là một trong những loại serum có thể gia công. Đây là một trong những công nghệ serum chuyên sâu nhất. Hiệu quả trị mụn của các loại serum luôn tốt hơn rất nhiều so với các loại kem trị mụn. Sản phẩm giúp diệt khuẩn, kháng viêm, làm khô nhân mụn. Không những mang đến hiệu quả trị mụn xuất sắc, serum trị mụn còn giúp hạn chế quá trình bong tróc và tăng cường khả năng dưỡng ẩm, phục hồi da.</span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:13.999999999999998pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><img src="https://lh3.googleusercontent.com/7Usgnl5oBOrj4q_Q2-XLftTuXvZdf9fnxckqDevy64YoZX5j9KqOmFdr8H1r2UkenhLSQOh5WuzOvq2BhiCJ20GgA5j1EhPJlDFPhsl7wiINnz0u85ENG7pTUA-XMrpA-Sxrnus8QBCwAv5edgVhPQ" style="height:403px; width:605px"></span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:10pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><em>Chị em ưa chuộng serum dưỡng da</em></span></span></span></p>
+
+<ol>
+<li style="list-style-type:decimal">
+<h3 style="color:#696969; font-style:normal"><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum ngừa lão hóa</span></span></span></h3>
+</li>
+</ol>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Sau tuổi 25, chúng ta đều đối mặt với vấn đề lão hóa. Một làn da không tuổi luôn là nỗi khao khát của nhiều chị em phụ nữ. Chính vì vậy, sử dụng serum chống lão hóa rất cần thiết. Đây cũng là một trong những loại serum rất được thị trường ưa chuộng. Các đơn hàng tại các nhà máy gia công có rất nhiều. Serum chống lão hóa đa dạng, đa phần đều có tác dụng ngăn ngừa các dấu hiệu lão hóa. Đồng thời dưỡng ẩm, làm trắng da.&nbsp;</span></span></span></p>
+
+<ol start="2">
+<li style="list-style-type:decimal">
+<h3 style="color:#696969; font-style:normal"><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum dưỡng tóc</span></span></span></h3>
+</li>
+</ol>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Trong các loại mỹ phẩm chăm sóc tóc, serum vẫn còn khá mới mẻ. Thế nhưng càng ngày càng nhận được sự yêu mến từ người dùng. Chính vì vậy, nhu cầu gia công serum dưỡng tóc hiện nay cũng rất cao. Các đơn vị gia công nhận yêu cầu từ khách hàng. Những chuyên gia nghiên cứu sẽ nghiên cứu và cho ra sản phẩm đúng với nhu cầu của khách hàng.&nbsp;</span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:13.999999999999998pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><img alt="Top 11 loại serum dưỡng tóc tốt nhất cho da đầu hiện nay" src="https://lh6.googleusercontent.com/ZCWN2pI5yvBbZofpwkUN4V3CVNfYxMHDxjuowoPANyjKZGIB3dNJ1jowJmZQtU1TgHXYSpiTZkc_3m0FzO4eUDfEoAnuJhTTbIu6hSx9vRgctcmfxHX1lwRioZe6cNL91LyIFYkPmB5uBASneQRuxA" style="height:454px; width:605px"></span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:10pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><em>Serum dưỡng tóc</em></span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Mỗi loại serum sẽ tạo nên một thương hiệu sản phẩm riêng. Mỗi nhà kinh doanh mỹ phẩm có thể đặt hàng gia công duy nhất 1 sản phẩm. Hoặc cũng có thể gia công nhiều sản phẩm để mở rộng khả năng phục vụ khách hàng.&nbsp;</span></span></span></p>
+
+<h2><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><strong>Tiêu chuẩn gia công serum tại QT Skin</strong></span></span></span></h2>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Trên thị trường có rất nhiều đơn vị nhận gia công serum. Bên cạnh những thương hiệu uy tín, có không ít những địa chỉ gia công kém chất lượng. Điều này ảnh hưởng không nhỏ đến thị trường serum cũng như uy tín của các nhà kinh doanh mỹ phẩm.</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Do đó, chọn lựa địa chỉ gia công uy tín và kinh nghiệm sẽ giúp bạn có được sản phẩm tốt nhất. Nếu không, hậu quả để lại vô cùng lớn. Rất nhiều nhà kinh doanh có ý tưởng tốt nhưng lại “chọn mặt gửi vàng” vào đơn vị kém chất lượng. Hậu quả là uy tín thương hiệu bị ảnh hưởng nghiêm trọng.</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Để có được sản phẩm tốt nhất, khi chọn đơn vị gia công, bạn cần đảm bảo các tiêu chuẩn sau đây:</span></span></span></p>
+
+<h3><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><strong>Nguyên liệu gia công phong phú, chất lượng và an toàn</strong></span></span></span></h3>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum là những sản phẩm chăm sóc da, tóc rất đặc thù. Nó có giá thành đắt hơn nhiều so với các loại kem dưỡng. Điều này cũng có nghĩa là khách hàng có yêu cầu rất cao với các sản phẩm serum.</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Muốn gia công serum hiệu quả, cần phải đảm bảo nguồn nguyên liệu phong phú cũng như an toàn. Nguồn nguyên liệu gia công thường là do đơn vị sản xuất gia công chủ động. Khách hàng không chuẩn bị phần này. Do đó, bạn hãy tham khảo chất lượng nguồn nguyên liệu của địa chỉ mà mình có dự định đặt hàng. Nguyên liệu tốt, an toàn, sạch sẽ góp phần quyết định đến chất lượng serum.</span></span></span></p>
+
+<h3><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><strong>Gia công serum theo quy trình hiện đại</strong></span></span></span></h3>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Serum có độ tinh khiết cao. Để làm được điều này, nhà máy sản xuất phải hiện đại. Công nghệ, các hệ thống chiết tách… Mọi thứ đều phải đạt chuẩn chất lượng cao nhất. Do đó, đây cũng là một trong những tiêu chuẩn hàng đầu để gia công serum. Nếu trang thiết bị thô sơ thì khó có thể đáp ứng được chất lượng sản phẩm.&nbsp;</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Thị trường mỹ phẩm đang có sự cạnh tranh rất lớn. Để làm được điều này, các sản phẩm phải có chất lượng đảm bảo, hiệu quả nhanh và duy trì lâu dài. Để làm được điều này, bạn cần phải chọn cơ sở gia công thật chất lượng, giàu kinh nghiệm.</span></span></span></p>
+
+<h3><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><strong>Đội ngũ chuyên gia giỏi, giàu kinh nghiệm tại QT Skin</strong></span></span></span></h3>
+
+<p style="text-align:center"><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><img alt="Có thể là hình ảnh về 1 người và văn bản cho biết 'NHÀ MÁY GIA CÔNG SẢN XUẤT ĐẠT CHUẨN GMP CGMP ASEAN SỞ CÔNG THỨC CỔ TRUYỀN HỮU TỪ THẢO DƯỢC'" src="https://lh4.googleusercontent.com/6rLEClsGoL7Hm1SoKOMWEWhd2fGylEB5oU37kQwtklg8-8gBhGJX20833oQWEjuirt0ZhABSGbHNwsaHSiiVMsZImKkbH_4gFPNVHhmAVASfvNTyydNS8qcgqby7kYAhlznphawubkf1b__yaBpV5Q" style="height:605px; width:605px"></span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:10pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><em>Đội ngũ chuyên gia giỏi, giàu kinh nghiệm</em></span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Các chuyên gia chính là những người tạo nên công thức serum, xây dựng các tiêu chuẩn chất lượng và kiểm định quy trình sản xuất. Một nhà máy sản xuất có đội ngũ chuyên gia giỏi sẽ đảm bảo cho chất lượng sản phẩm.&nbsp;</span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Chính vì điều này, chọn cho mình một địa chỉ gia công có đội ngũ giỏi sẽ giúp bạn tạo nên các sản phẩm chất lượng nhất.&nbsp;</span></span></span></p>
+
+<h3><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><strong>Quy trình làm việc khép kín, hiệu quả</strong></span></span></span></h3>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000">Một trong những tiêu chuẩn trong gia công các sản phẩm serum chính là quy trình làm việc. Quy trình làm việc hiện đại, khép kín. Từ khâu tư vấn đến vấn đề giao hàng đúng hẹn, hậu mãi chu đáo sẽ tạo nên thương hiệu mỹ phẩm cho bạn.</span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><strong><img src="https://lh4.googleusercontent.com/5VKzY5hUa3Cjiqwxxaa659yojqzc9L6STN9OFpsHVpNR6Bue-Ku7Jn3oFSBoEV-RxhfTcNlje5ZLyNKfBKXp_p0cGAnzjjKT5L8zdoBe1vFYddPBIwMV4qB-kb3z45ihwxP9WFQI8qo2Czy_715hHw" style="height:387px; width:605px"></strong></span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:10pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><em>Quy trình đóng gói tiêu chuẩn</em></span></span></span></p>
+
+<p><span style="font-size:13pt"><span style="font-family:'Times New Roman',serif"><span style="color:#000000"><span style="background-color:#ffffff">Một đơn vị gia công mỹ phẩm tiêu chuẩn sẽ có cách để làm hài lòng khách hàng của mình. Đó cũng là những gì mà QT Skin đang hướng đến. Với đội ngũ chuyên nghiệp và kinh nghiệm phong phú, chúng tôi tự hào là đối tác của hàng trăm thương hiệu mỹ phẩm serum nội địa trên thị trường Việt hiện nay. Không những thế, nhiều sản phẩm của QT Skin còn được xuất khẩu đi nhiều quốc gia trên thế giới.</span></span></span></span></p>
+
+<h3>&nbsp;</h3>
+    </div>
+</div>
+                </div>
+                <div class="md:col-span-4 col-span-12">
+                    <div class="bg-[#fff] mt-[20px] sticky top-[70px]">
+                        <div class="bg-[#ee4023] p-[15px] text-[#fff] text-[1.3rem] font-bold flex justify-center">
+                            GỬI CÂU HỎI TƯ VẤN
+                        </div>
+    
+                        <form action="" class="p-[20px]">
+                            <input class="w-full  border-[1px] border-solid border-[var(--gray)] mb-[10px] rounded-[5px] p-[10px]" type="text" placeholder="Họ và tên">
+                            <input class="w-full  border-[1px] border-solid border-[var(--gray)] mb-[10px] rounded-[5px] p-[10px]"  type="text" placeholder="Điện thoại">
+                            <input class="w-full  border-[1px] border-solid border-[var(--gray)] mb-[10px] rounded-[5px] p-[10px]" type="text" placeholder="Email">
+                            <textarea class="w-full  border-[1px] border-solid border-[var(--gray)] mb-[10px] rounded-[5px] p-[10px]" placeholder="Nội dung câu hỏi" name="" id="" cols="30" rows="10"></textarea>
+                            
+                            <button type="submit" class="mx-auto block py-[10px] px-[30px] bg-[#0b5cad] text-[#fff] rounded-[30px] font-semibold">
+                                    Gửi thông tin
+                            </button>
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+      <div
+        class="pt-[20px] pb-[2.142857142857143rem]"
+      >
+        <div class="text-center">
+            <p class="text-center mx-[0] my-[2em] uppercase text-[#004C99] text-2xl font-semibold uppercase">các sản phẩm khác</p>
+          <!-- list sản phẩm -->
+          <div class="responsive">
+            <div class=" mx-[10px] bg-[var(--white)] w-[22rem] text-center p-[23px]">
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://amstudio.vn/wp-content/uploads/2022/08/a-23-771x800.png"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto] img55 img55"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" mx-[10px] bg-[var(--white)] w-[22rem] text-center p-[23px]">
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://amstudio.vn/wp-content/uploads/2022/08/a-23-771x800.png"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto] img55"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" mx-[10px] bg-[var(--white)] w-[22rem] text-center p-[23px]">
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://amstudio.vn/wp-content/uploads/2022/08/a-23-771x800.png"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto] img55"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" mx-[10px] bg-[var(--white)] w-[22rem] text-center p-[23px]" >
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://amstudio.vn/wp-content/uploads/2022/08/a-23-771x800.png"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto] img55"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" mx-[10px] bg-[var(--white)] w-[22rem] text-center p-[23px]">
+              <div class="product-thumb--text">
+                <a href="">
+                  <div class="">
+                    <img
+                      src="https://cdnphoto.dantri.com.vn/gUxwHLW-o6CxjDL7H9h7kd2VqSk=/thumb_w/1020/2023/05/09/da-trang-min-3-1683609660061.png"
+                      alt="Đại tràng Tâm Bình"
+                      class="h-[auto] img55"
+                      data-ll-status="loaded"
+                    />
+                  </div>
+                  <h3
+                    class="text-[var(--blue-004C99)] text-[1.2rem] font-bold mt-[0.5rem] mb-[1rem] uppercase"
+                  >
+                    Đại tràng Tâm Bình
+                  </h3>
+                </a>
+                <div class="product-thumb--collapse">
+                  <a href="">
+                    <div class="text-start">
+                      Hỗ trợ giảm các triệu chứng của viêm đại tràng cấp và mạn
+                      tính, viêm đại tràng co thắt, rối loạn tiêu hóa, đau bụng,
+                      đầy hơi, tiêu chảy; kích thích tiêu hoá
+                    </div>
+                  </a>
+                  <div class="flex justify-between items-center mt-[15px]">
+                    <a href="">
+                      <span
+                        class="text-lg font-bold text-[var(--red-b7050b)] float-left leading-[2rem]"
+                        >85.000 Đ</span
+                      > </a
+                    ><a
+                      href=""
+                      class="bg-[var(--red-ee4023)] text-[var(--white)] px-[13px] py-[0] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] float-right h-[40px] leading-[40px]"
+                      >Xem chi tiết</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer
+        class="md:pt-[0] pt-[20px] px-[8.3333333333%] pb-[100px] bg-[#0d4b89] text-[#fff] flex items-start flex-wrap"
+      >
+        <a
+          class="relative md:block hidden p-[20px] bg-[#fff] rounded-tl-[0] rounded-br-[15px] rounded-tr-[0] rounded-bl-[0] text-xs"
+          href=""
+          ><img
+            src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.png"
+            alt="#"
+        /></a>
+
+        <div class="md:pt-[30px] md:px-[60px] pb-[0] md:w-[35%]">
+          <div class="mb-[0.5rem]" static-id="8">
+            <span
+              class="font-bold"
+              data-sheets-value='{"1":2,"2":"CÔNG TY TNHH SX &amp; TM DƯỢC PHẨM TÂM BÌNH"}'
+              data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+              >CÔNG TY TNHH SX &amp; TM DƯỢC PHẨM TÂM BÌNH</span
+            >
+          </div>
+          <!-- <div class="footer-tax-code" static-id="57">MST/ĐKKD/QĐTL: 0102190173</div> -->
+          <div class="footer-branch-addrs" static-id="12">
+            <a
+              target="_blank"
+              rel="nofollow, noopener"
+              href="https://goo.gl/maps/KxMEBLVK3ytwmn8E6"
+              title="Google map"
+              >Địa chỉ: 349 Kim Mã, Q.Ba Đình, Hà Nội</a
+            >
+          </div>
+          <div
+            class="pb-[15px] mb-[15px] relative [border-bottom:1px_solid_#ffffff81]"
+          >
+            Điện thoại:
+            <a href="tel:02437245678">(024) 3724 5678</a>
+            <span>-</span>
+            <a href="tel:02437345600">(024) 3734 5600</a>
+            <div class="footer-addrs">
+              Email: duocpham@tambinh.vn <br />Giấy chứng nhận ĐKKD số
+              0102190173 do Sở Kế hoạch và Đầu tư TP.HN cấp ngày 20/03/2007
+            </div>
+          </div>
+
+          <!-- == -->
+
+          <div class="mb-[0.5rem]" static-id="13">
+            <span
+              class="font-bold"
+              data-sheets-value='{"1":2,"2":"CHI NHÁNH DƯỢC PHẨM TÂM BÌNH SÀI GÒN"}'
+              data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+              >CHI NHÁNH DƯỢC PHẨM TÂM BÌNH SÀI GÒN</span
+            >
+          </div>
+          <div class="footer-branch-addrs" static-id="12">
+            <a
+              target="_blank"
+              rel="nofollow, noopener"
+              href="https://g.page/Tambinhsaigon?share"
+              title="Google map"
+              >Địa chỉ 243/9/21 Tô Hiến Thành, Phường 13 Quận 10, TP.HCM</a
+            >
+          </div>
+          <div class="footer-phone">
+            Điện thoại:
+            <a href="tel:02838623944">(028) 3862 3944</a>
+            <span>-</span>
+            <a href="tel:02838623945">(028) 3862 3945</a>
+          </div>
+          <!-- == -->
+          <div class="footer-hotline">
+            <strong
+              >Hotline tư vấn:
+              <a href="tel:0343446699">0343 44 66 99</a></strong
+            >
+          </div>
+        </div>
+        <div class="md:pt-[30px] md:w-[30%] md:pr-[30px]">
+          <div
+            class="pb-[15px] mb-[15px] relative [border-bottom:1px_solid_#ffffff81]"
+          >
+            <div class="footer-company help-ttu help-fwb" static-id="15">
+              <span
+                class="font-bold"
+                data-sheets-value='{"1":2,"2":"NHÀ MÁY SẢN XUẤT DƯỢC PHẨM TÂM BÌNH"}'
+                data-sheets-userformat='{"2":513,"3":{"1":0},"12":0}'
+                >NHÀ MÁY SẢN XUẤT GMP DƯỢC PHẨM TÂM BÌNH</span
+              >
+            </div>
+            <div class="footer-branch-addrs" static-id="12">
+              <a
+                target="_blank"
+                rel="nofollow, noopener"
+                href="https://goo.gl/maps/V58i7q8YE1wMQJhT7"
+                title="Google map"
+                >Địa chỉ: Lô CN03 - 12 Khu CN Ninh Hiệp, Gia Lâm, Hà Nội</a
+              >
+            </div>
+            <div class="footer-phone _line">
+              Điện thoại:
+              <a href="tel:02437245678">(024) 3696 3454</a>
+              <span>-</span>
+              <a href="tel:02437345600">(024) 3734 5600</a>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-[calc(((100%_-_15px)_/_3)_*_1.75)] mr-[15px]">
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách biên tập</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách bảo mật thông tin</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách kiểm hàng, đổi trả và hoàn tiền</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách vận chuyển</a
+              >
+              <a
+                class="w-full inline-block font-bold mb-[2px] text-[#fff]"
+                href=""
+                >Chính sách mua hàng – Thanh toán</a
+              >
+            </div>
+
+            <div class="w-[calc(((100%_-_15px)_/_3)_*_1.25)]">
+              <a href=""
+                ><img
+                  src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/icon1.png"
+                  data-src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/home/icon1.png"
+                  class="[135px] w-full h-auto mb-[1rem]"
+              /></a>
+              <a href="" title="DMCA.com Protection Status" class="dmca-badge">
+                <img
+                  src="https://images.dmca.com/Badges/_dmca_premi_badge_5.png?ID=e50d6272-11e9-48b8-b103-2fc7569708e9"
+                  alt="DMCA.com Protection Status"
+                  class="[135px] w-full h-auto"
+                  data-ll-status="loaded"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="md:pt-[30px] md:w-[20%]">
+          <div class="font-bold uppercase mb-[1rem]">
+            Đăng ký để theo dõi Tâm Bình
+          </div>
+          <form
+            id="subscribe_email_footer"
+            action=""
+            method="POST"
+            class="relative overflow-hidden mt-[20px]"
+          >
+            <div class="form-group" id="form-fields-footer">
+              <input
+                type="email"
+                placeholder="Nhập email của bạn "
+                class="text-[#000] font-[Montserrat] text-xs float-left w-full outline-[none] border-none h-[40px] px-[10px] py-[0]"
+                id="subscribe_email"
+                name="subscribe_email"
+              />
+              <button
+                type="submit"
+                id="btn-register"
+                name="action"
+                class="btn btn-default"
+              >
+                <img
+                  class="block absolute right-[10px] top-[9px] border-none outline-[none] z-[1] cursor-pointer bg-transparent w-[20px]"
+                  src="../img/send.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="form-result-message"></div>
+          </form>
+          <ul class="mt-[25px] mx-[0] mb-[0] pl-0">
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href=""
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/facebook.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://zalo.me/0865344349"
+                target="_blank"
+                class="inline-block float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                >Zalo</a
+              >
+            </li>
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href="https://www.youtube.com/c/TambinhVn"
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/instagram.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href="https://www.linkedin.com/in/duoctambinh/"
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/twitter.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                class="inline-block p-[4px] float-left w-[36px] h-[36px] mr-[20px] mb-[10px] text-[#fff] rounded-tl-[10px] rounded-br-[10px] rounded-tr-[0] rounded-bl-[0] [text-transform:inherit] border-[1px] border-solid border-[#fff] text-center text-sm leading-[36px] font-bold [transition:0.4s]"
+                href=""
+                target="_blank"
+              >
+                <img class="text-[#fff]" src="../img/youtube.svg" alt=""
+              /></a>
+            </li>
+            <p style="clear: both">
+              Cố vấn chuyên môn nội dung <br /><b>Ths.Bs Nguyễn Thị Hằng</b>
+            </p>
+          </ul>
+        </div>
+      </footer>
+
+      <div
+        class="hidden md:block [border-top:2px_solid_#ee4023] bg-[#0b5cad] px-[0] py-[10px] text-[#fff] fixed w-full left-[0] bottom-[0] z-[1001]"
+      >
+        <div class="lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+          <div class="flex justify-between">
+            <div class="flex gap-[20px]">
+              <div
+                class="bg-[#fff] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#0b5cad] text-[15px] flex text-center"
+              >
+                <a href="tel:0343446699" class="flex" title="">
+                  <img
+                    class="w-[12px] mr-[10px]"
+                    src="../img/ic_phone-blue.svg"
+                    alt=""
+                  />
+                  <span class="font-bold">0343 44 66 99</span>
+                </a>
+              </div>
+              <div class="">
+                <a
+                  class="bg-[#ee4023] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#ffffff] text-[15px] flex items-center text-center font-bold"
+                  href=""
+                  title=""
+                  id="ffb"
+                >
+                  <img
+                    class="w-[15px] mr-[10px]"
+                    src="../img/cart.svg"
+                    alt=""
+                  />
+                  MUA ONLINE
+                </a>
+              </div>
+            </div>
+            <div
+              class="bg-[#fff] leading-[37px] px-[13px] py-[0] rounded-[5px] text-[#0b5cad] text-[15px] flex text-center items-center"
+            >
+              <a href="tel:0343446699" class="flex" title="">
+                <img
+                  class="w-[15px] mr-[10px]"
+                  src="../img/calendar-check-fill.svg"
+                  alt=""
+                />
+                <span class="font-bold">GỬI CÂU HỎI</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- animation -->
+    <!-- btn to top -->
+    <script src="../js/btnToTopandhideMenu.js"></script>
+    <!-- animation giowis thieu theo yeu cau -->
+    <!-- <script src="../js/animationQC.js"></script> -->
+    <!-- ẩn hiện menu mobile -->
+    <!-- <script src="../js/menu.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const $jq = jQuery.noConflict();
+
+      jQuery(document).ready(function () {
+        jQuery(".slider-single").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: false,
+          infinite: false,
+          speed: 400,
+          cssEase: "cubic-bezier(0.77, 0, 0.18, 1)",
+        });
+
+        jQuery(".slider-nav")
+          .on("init", function (event, slick) {
+            jQuery(".slider-nav .slick-slide.slick-current").addClass(
+              "is-active"
+            );
+          })
+          .slick({
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            dots: false,
+            focusOnSelect: false,
+            infinite: false,
+            arrows: false,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 5,
+                  slidesToScroll: 5,
+                },
+              },
+              {
+                breakpoint: 640,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 4,
+                },
+              },
+              {
+                breakpoint: 420,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                },
+              },
+            ],
+          });
+      });
+
+      jQuery(".responsive").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+      jQuery(".slider-single").on(
+        "afterChange",
+        function (event, slick, currentSlide) {
+          jQuery(".slider-nav").slick("slickGoTo", currentSlide);
+          var currrentNavSlideElem =
+            '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+          jQuery(".slider-nav .slick-slide.is-active").removeClass("is-active");
+          jQuery(currrentNavSlideElem).addClass("is-active");
+        }
+      );
+
+      jQuery(".slider-nav").on("click", ".slick-slide", function (event) {
+        event.preventDefault();
+        var goToSingleSlide = jQuery(this).data("slick-index");
+
+        jQuery(".slider-single").slick("slickGoTo", goToSingleSlide);
+      });
+    </script>
+
+    <script>
+      var btnNewFeed = document.getElementById("newfeed-box");
+      var btnEvent = document.getElementById("event-box");
+      var boxNewFeed = document.getElementById("newfeed-box-content");
+      var boxEvent = document.getElementById("event-box-content");
+
+      btnNewFeed.addEventListener("click", () => {
+        btnNewFeed.classList.add("bg-[var(--blue-004C99)]");
+        btnNewFeed.classList.add("text-[var(--white)]");
+        btnNewFeed.classList.remove("bg-[var(--white)]");
+        btnNewFeed.classList.remove("text-[var(--blue-004C99)]");
+        btnEvent.classList.remove("bg-[var(--blue-004C99)]");
+        btnEvent.classList.remove("text-[var(--white)]");
+        btnEvent.classList.add("bg-[var(--white)]");
+        btnEvent.classList.add("text-[var(--blue-004C99)]");
+        boxNewFeed.classList.add("hidden");
+        boxEvent.classList.remove("hidden");
+      });
+
+      btnEvent.addEventListener("click", () => {
+        btnEvent.classList.add("bg-[var(--blue-004C99)]");
+        btnEvent.classList.add("text-[var(--white)]");
+        btnEvent.classList.remove("bg-[var(--white)]");
+        btnEvent.classList.remove("text-[var(--blue-004C99)]");
+        btnNewFeed.classList.remove("bg-[var(--blue-004C99)]");
+        btnNewFeed.classList.remove("text-[var(--white)]");
+        btnNewFeed.classList.add("bg-[var(--white)]");
+        btnNewFeed.classList.add("text-[var(--blue-004C99)]");
+        boxNewFeed.classList.remove("hidden");
+        boxEvent.classList.add("hidden");
+      });
+    </script>
+
+    <script>
+      var btnVideo = document.getElementById("video-btn");
+      var btnVTC = document.getElementById("tvc-btn");
+      var boxVideo = document.getElementById("video-box");
+      var boxTCV = document.getElementById("tvc-box");
+
+      btnVideo.addEventListener("click", () => {
+        btnVideo.classList.add("bg-[var(--blue-004C99)]");
+        btnVideo.classList.add("text-[var(--white)]");
+        btnVideo.classList.remove("bg-[var(--white)]");
+        btnVideo.classList.remove("text-[var(--blue-004C99)]");
+        btnVTC.classList.remove("bg-[var(--blue-004C99)]");
+        btnVTC.classList.remove("text-[var(--white)]");
+        btnVTC.classList.add("bg-[var(--white)]");
+        btnVTC.classList.add("text-[var(--blue-004C99)]");
+        boxVideo.classList.add("hidden");
+        boxTCV.classList.remove("hidden");
+      });
+
+      btnVTC.addEventListener("click", () => {
+        btnVTC.classList.add("bg-[var(--blue-004C99)]");
+        btnVTC.classList.add("text-[var(--white)]");
+        btnVTC.classList.remove("bg-[var(--white)]");
+        btnVTC.classList.remove("text-[var(--blue-004C99)]");
+        btnVideo.classList.remove("bg-[var(--blue-004C99)]");
+        btnVideo.classList.remove("text-[var(--white)]");
+        btnVideo.classList.add("bg-[var(--white)]");
+        btnVideo.classList.add("text-[var(--blue-004C99)]");
+        boxTCV.classList.add("hidden");
+        boxVideo.classList.remove("hidden");
+      });
+    </script>
+
+    <!-- script click search in header -->
+    <script>
+      const btnSearch = document.getElementById("box-search");
+      const boxSearch = document.getElementById("search-box");
+
+      btnSearch.addEventListener("click", () => {
+        boxSearch.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

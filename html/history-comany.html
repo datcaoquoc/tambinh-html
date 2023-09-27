@@ -25,187 +25,214 @@
   </head>
   <body>
     <div>
-     <!-- header -->
-     <div
-     class="sticky top-0 z-[1] [transition:height_0.3s] bg-[var(--white)]"
-   >
-     <div class="box-container mx-auto grid grid-cols-12">
-       <div class="col-span-1 md:block hidden" id="box-logo">
-         <img
-           id="logo-header"
-           src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
-           alt=""
-         />
-       </div>
+      <!-- header -->
+      <div
+        class="sticky top-0 z-[1] [transition:height_0.3s] bg-[var(--white)]"
+      >
+        <div class="box-container mx-auto grid grid-cols-12">
+          <div class="col-span-1 md:block hidden" id="box-logo">
+            <img
+              id="logo-header"
+              src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+              alt=""
+            />
+          </div>
 
-       <div class="md:col-span-11 col-span-12 md:pr-[40px] pr-0">
-         <!-- top header -->
-         <div id="top-headers" class="md:block hidden">
-           <ul class="flex justify-end gap-2">
-             <li
-               class="line-clamp-2 inline-block font-bold t-blue p-[5px] text-[1.1rem]"
-             >
-               <a href="" class="flex"
-                 ><img class="w-[1rem]" src="../img/cart-fill.svg" /> (0) Giỏ
-                 hàng</a
-               >
-             </li>
-             <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
-               <a href="">Kiểm tra đơn hàng</a>
-             </li>
-             <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
-               <a href="">Tuyển dụng</a>
-             </li>
-           </ul>
-         </div>
-         <!-- header -->
-         <nav role="navigation" class="menu">
-           <label
-           for="menu"
-           class="w-full h-[55px] flex justify-between flex-nowrap"
-         >
-           <div>
-             <img
-               class="w-[30px] h-[30px]"
-               src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
-               alt=""
-             />
-           </div>
-           <div>
-             <img
-               class="w-[30px] h-[30px]"
-               src="../img/menu-svgrepo-com.svg"
-               alt=""
-             />
-           </div>
-         </label>
-           <input type="checkbox" id="menu" />
-           <ul class="list-mn md:gap-[1rem] flex flex-wrap items-center justify-end !pb-[20px] md:!pb-0">
-             <li class="w-[100%] hidden md:block md:w-auto menu-item uppercase t-blue font-semibold">
-               <a href="home.html" class="font-bold w-[2.2rem]">
-                 <img class="w-[100%] h-auto" src="../img/home-icon.svg" alt="" />
-               </a>
-             </li>
-             <li class="w-[100%] block md:!hidden md:w-auto menu-item uppercase t-blue font-semibold">
-               <a href="home.html" class="font-bold w-[2.2rem]">
-                 Trang chủ
-               </a>
-             </li>
-             <!-- GIỚI THIỆU -->
-             <li
-               class="w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
-             >
-               <a
-                 href=""
-                 for="about"
-                 class="t-blue font-bold text-[1rem]"
-                 >GIỚI THIỆU
-               </a>
-               <input type="checkbox" id="about" />
-               <ul class="menu-dropdown">
-                 <li>
-                   <a class="text-[1rem]" href="review-product.html"
-                     >Giới thiệu công ty</a
-                   >
-                 </li>
-                 <li>
-                   <a class="text-[1rem]" href="history-comany.html"
-                     >Lịch sử hình thành</a
-                   >
-                 </li>
-                 <li>
-                   <a class="text-[1rem]" href="vision.html"
-                     >Tầm nhìn sử mệnh</a
-                   >
-                 </li>
-                 <li>
-                   <a class="text-[1rem]" href="diagram-comany.html"
-                     >Sơ đồ công ty</a
-                   >
-                 </li>
-                 <li>
-                   <a class="text-[1rem]" href="achievements.html"
-                     >Thành tích</a
-                   >
-                 </li>
-               </ul>
-             </li>
-             <li
-               class=" w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
-             >
-               <a href="" for="about" class="font-bold text-[1rem]"
-                 >TIN TỨC & SỰ KIỆN
-               </a>
-               <input type="checkbox" id="about" />
-               <ul class="menu-dropdown">
-                 <li>
-                   <a class="text-[1rem]" href="news.html">Sự kiện</a>
-                 </li>
-                 <li class="menu-hasdropdown menu-hasflyout">
-                   <a class="text-[1rem]" href="news.html"
-                     >Tin tức nội bộ
-                   </a>
-                 </li>
-               </ul>
-             </li>
-             <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
-               <a href="advise.html" class="font-bold text-[1rem]">Ban cố vấn</a>
-             </li>
-             <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
-               <a href="action-news.html" class="font-bold text-[1rem]">HOẠT ĐỘNG</a>
-             </li>
-             <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
-               <a href="library.html" class="font-bold text-[1rem]">ẢNH & VIDEO</a>
-             </li>
-             <li class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold">
-               <a href="contact.html" class="font-bold text-[1rem]">LIÊN HỆ</a>
-             </li>
-             <li class="w-[100%] md:w-auto ml-[2rem] md:block flex justify-center">
-               <button
-                 class="flex items-center gap-2 bg-[#0f4379] text-[1rem] px-[10px] py-[0.4rem] text-[var(--white)] font-bold rounded-2xl"
-               >
-                 <img
-                   class="h-[0.9rem] w-auto text-[1rem] rounded-2xl"
-                   src="../img/ic_phone.svg"
-                   alt=""
-                 />
-                 0343 44 66 99
-               </button>
-             </li>
+          <div class="md:col-span-11 col-span-12 md:pr-[40px] pr-0">
+            <!-- top header -->
+            <div id="top-headers" class="md:block hidden">
+              <ul class="flex justify-end gap-2">
+                <li
+                  class="line-clamp-2 inline-block font-bold t-blue p-[5px] text-[1.1rem]"
+                >
+                  <a href="" class="flex"
+                    ><img class="w-[1rem]" src="../img/cart-fill.svg" /> (0) Giỏ
+                    hàng</a
+                  >
+                </li>
+                <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                  <a href="">Kiểm tra đơn hàng</a>
+                </li>
+                <li class="inline-block font-bold t-blue p-[5px] text-[1.1rem]">
+                  <a href="">Tuyển dụng</a>
+                </li>
+              </ul>
+            </div>
+            <!-- header -->
+            <nav role="navigation" class="menu">
+              <label
+                for="menu"
+                class="w-full h-[55px] flex justify-between flex-nowrap"
+              >
+                <div>
+                  <img
+                    class="w-[30px] h-[30px]"
+                    src="https://tambinh.vn/wp-content/themes/tam-binh/assets/images/logo.svg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="w-[30px] h-[30px]"
+                    src="../img/menu-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
+              </label>
+              <input type="checkbox" id="menu" />
+              <ul
+                class="list-mn md:gap-[1rem] flex flex-wrap items-center justify-end !pb-[20px] md:!pb-0"
+              >
+                <li
+                  class="w-[100%] hidden md:block md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="home.html" class="font-bold w-[2.2rem]">
+                    <img
+                      class="w-[100%] h-auto"
+                      src="../img/home-icon.svg"
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li
+                  class="w-[100%] block md:!hidden md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="home.html" class="font-bold w-[2.2rem]">
+                    Trang chủ
+                  </a>
+                </li>
+                <!-- GIỚI THIỆU -->
+                <li
+                  class="w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+                >
+                  <a href="" for="about" class="t-blue font-bold text-[1rem]"
+                    >GIỚI THIỆU
+                  </a>
+                  <input type="checkbox" id="about" />
+                  <ul class="menu-dropdown">
+                    <li>
+                      <a class="text-[1rem]" href="review-product.html"
+                        >Giới thiệu công ty</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="history-comany.html"
+                        >Lịch sử hình thành</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="vision.html"
+                        >Tầm nhìn sử mệnh</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="diagram-comany.html"
+                        >Sơ đồ công ty</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[1rem]" href="achievements.html"
+                        >Thành tích</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item menu-hasdropdown uppercase t-blue font-semibold"
+                >
+                  <a href="" for="about" class="font-bold text-[1rem]"
+                    >TIN TỨC & SỰ KIỆN
+                  </a>
+                  <input type="checkbox" id="about" />
+                  <ul class="menu-dropdown">
+                    <li>
+                      <a class="text-[1rem]" href="news.html">Sự kiện</a>
+                    </li>
+                    <li class="menu-hasdropdown menu-hasflyout">
+                      <a class="text-[1rem]" href="news.html"
+                        >Tin tức nội bộ
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="advise.html" class="font-bold text-[1rem]"
+                    >Ban cố vấn</a
+                  >
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="action-news.html" class="font-bold text-[1rem]"
+                    >HOẠT ĐỘNG</a
+                  >
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="library.html" class="font-bold text-[1rem]"
+                    >ẢNH & VIDEO</a
+                  >
+                </li>
+                <li
+                  class="w-[100%] md:w-auto menu-item uppercase t-blue font-semibold"
+                >
+                  <a href="contact.html" class="font-bold text-[1rem]"
+                    >LIÊN HỆ</a
+                  >
+                </li>
+                <li
+                  class="w-[100%] md:w-auto ml-[2rem] md:block flex justify-center"
+                >
+                  <button
+                    class="flex items-center gap-2 bg-[#0f4379] text-[1rem] px-[10px] py-[0.4rem] text-[var(--white)] font-bold rounded-2xl"
+                  >
+                    <img
+                      class="h-[0.9rem] w-auto text-[1rem] rounded-2xl"
+                      src="../img/ic_phone.svg"
+                      alt=""
+                    />
+                    0343 44 66 99
+                  </button>
+                </li>
 
-             <li class="relative menu-hasdropdown order-first md:order-last block">
-               <button
-                 id="box-search"
-                 class="hidden md:block h-[1.9rem] w-[1.9rem] rounded-[100%] border-[1.5px] border-solid border-[var(--blue-dark)]"
-               >
-                 <img class="h-[0.9rem]" src="../img/ic_search.svg" alt="" />
-               </button>
-               <form
-                 action=""
-                 id="search-box"
-                 class="hidden search-mobile animate-slide-in-left"
-               >
-                 <div
-                   class="menu-dropdown flex flex-nowrap relative p-[15px] md:p-[0] mt-[15px] md:mt-[0] md:absolute top-[143%] right-[0] bg-[#ffffff] [box-shadow:0px_0px_5px_rgb(176,_176,_176)]"
-                 >
-                   <input
-                     class="w-[300px] outline-[none]"
-                     type="text"
-                     placeholder="Nhập từ khóa..."
-                   />
-                   <img
-                     class="cursor-pointer w-[1rem] mr-[10px]"
-                     src="../img/ic_search.svg"
-                     alt=""
-                   />
-                 </div>
-               </form>
-             </li>
-           </ul>
-         </nav>
-       </div>
-     </div>
-   </div>
+                <li
+                  class="relative menu-hasdropdown order-first md:order-last block"
+                >
+                  <button
+                    id="box-search"
+                    class="hidden md:block h-[1.9rem] w-[1.9rem] rounded-[100%] border-[1.5px] border-solid border-[var(--blue-dark)]"
+                  >
+                    <img class="h-[0.9rem]" src="../img/ic_search.svg" alt="" />
+                  </button>
+                  <form
+                    action=""
+                    id="search-box"
+                    class="hidden search-mobile animate-slide-in-left"
+                  >
+                    <div
+                      class="menu-dropdown flex flex-nowrap relative p-[15px] md:p-[0] mt-[15px] md:mt-[0] md:absolute top-[143%] right-[0] bg-[#ffffff] [box-shadow:0px_0px_5px_rgb(176,_176,_176)]"
+                    >
+                      <input
+                        class="w-[300px] outline-[none]"
+                        type="text"
+                        placeholder="Nhập từ khóa..."
+                      />
+                      <img
+                        class="cursor-pointer w-[1rem] mr-[10px]"
+                        src="../img/ic_search.svg"
+                        alt=""
+                      />
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
 
       <div class="relative">
         <div
@@ -228,7 +255,10 @@
             id="menu-item-394"
             class="z-[0.1] cursor-pointer bg-[var(--white)] text-[var(--blue-004C99)] block text-[#000] leading-none text-sm px-[20px] py-[10px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
           >
-            <a href="review-product.html" class="text-[1.1rem]" aria-current="page"
+            <a
+              href="review-product.html"
+              class="text-[1.1rem]"
+              aria-current="page"
               >GIỚI THIỆU CÔNG TY</a
             >
           </li>
@@ -236,7 +266,9 @@
             id="menu-item-395"
             class="z-[0.1] cursor-pointer bg-[var(--blue-004C99)] text-[var(--white)] block text-[#000] leading-none text-sm px-[20px] py-[10px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
           >
-            <a href="history-comany.html" class="text-[1.1rem]">LỊCH SỬ HÌNH THÀNH</a>
+            <a href="history-comany.html" class="text-[1.1rem]"
+              >LỊCH SỬ HÌNH THÀNH</a
+            >
           </li>
           <li
             id="menu-item-395"
@@ -248,7 +280,9 @@
             id="menu-item-395"
             class="z-[0.1] cursor-pointer bg-[var(--white)] text-[var(--blue-004C99)] block text-[#000] leading-none text-sm px-[20px] py-[10px] ml-[10px] border-[1px] border-solid border-[rgba(27,27,27,.1)] rounded-tl-[6px] rounded-br-[6px] rounded-tr-[0] rounded-bl-[0] text-center [transition:all_.3s_ease] text-[var(--blue-004C99)] font-bold"
           >
-            <a href="diagram-comany.html" class="text-[1.1rem]">SƠ ĐỒ CÔNG TY</a>
+            <a href="diagram-comany.html" class="text-[1.1rem]"
+              >SƠ ĐỒ CÔNG TY</a
+            >
           </li>
           <li
             id="menu-item-395"
