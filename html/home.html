@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../popup.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
@@ -25,6 +26,15 @@
   </head>
   <body>
     <section>
+
+      <!-- popup shoppe -->
+      <div class="popup">
+        <a target="_blank" href="https://shopee.vn/">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOm7W71ATPA38csapsLmkKNAcSnpEGI-VV4ujcSgnyGF5386WaCgUfphsl8YoTSaKtzmmhUgtwMKGtvDbY9exL1WOLBqVE_5d0ZFp2Za2aXAi2kASJDELRmhk_6ulqfpd5AEUY9M5bFh_QSMBn0KTA06j_BxjWYVkWk45TVW4LJcwdQXY_5_XXja-aRg/s1920/trang-tri-gian-hang-shopee-tron-goi.jpg" alt="">
+        </a>
+        <a target="_blank" href="https://shopee.vn/" class="close"></a>
+      </div>
+
       <!-- header -->
       <div
         class="sticky top-0 z-[1] [transition:height_0.3s] bg-[var(--white)]"
@@ -45,7 +55,7 @@
                 <li
                   class="line-clamp-2 inline-block font-bold t-blue p-[5px] text-[1.1rem]"
                 >
-                  <a href="" class="flex"
+                  <a href="" class="flex" id="show-dialog"
                     ><img class="w-[1rem]" src="../img/cart-fill.svg" /> (0) Giỏ
                     hàng</a
                   >
@@ -2111,6 +2121,10 @@ window.addEventListener("scroll", scrollFunction);
     <!-- <script src="../js/animationQC.js"></script> -->
     <!-- ẩn hiện menu mobile -->
     <!-- <script src="../js/menu.js"></script> -->
+
+
+
+    <!-- phần pupup shopie a nhớ thêm 2 cái import jquery này nha -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
@@ -2122,6 +2136,13 @@ window.addEventListener("scroll", scrollFunction);
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="../js/popup.js"></script>
+
+
+
+
+
+
     <script>
       const $jq = jQuery.noConflict();
 
@@ -2258,6 +2279,7 @@ window.addEventListener("scroll", scrollFunction);
         boxVideo.classList.remove("hidden");
       });
     </script>
+
 
     <!-- script click search in header -->
     <script>
